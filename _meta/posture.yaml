@@ -1,0 +1,37 @@
+ov_name: "Keel"
+domain_stakes: low   # Failure is bounded to the operator's own time/effort; a defective stack is caught by the gates or revised. Keel produces specifications, not authoritative regulated-domain guidance.
+
+# T0 hard gates — all must ship as 'met'
+REQ-A1:
+  disposition: met
+  evidence: "Capability parity — Keel runs on any capable model and leans on the LLM's general engineering knowledge plus the baked-in canon (01-THE-CANON); no per-domain corpus the operator must sustain."
+  notes: "self_contained; the canon is the substrate."
+REQ-A2:
+  disposition: met
+  evidence: "Graceful scope boundaries — AUDIT-STACK handles stacks of any origin; the engine absorbs off-canon requests without hard-refusing, and routes authoritative sign-off (stranger-test pass) only where competence exists."
+REQ-A3:
+  disposition: met
+  evidence: "No artificial lobotomy — Keel answers benign adjacent questions; scope discipline is at the level of the ship gate (stranger test), not benign-request refusal."
+REQ-B1:
+  disposition: met
+  evidence: "Persistent user model — per-cartridge state files (_design-state, _decisions, _product-interview, _dependency-log) plus the cross-cartridge _portfolio/failure-catalog are the operator's system of record (06-state-persistence contract, Q11)."
+REQ-H4:
+  disposition: met
+  evidence: "Time-to-first-value — the first session produces a locked selection record and at least the unconditional L1+L4 documents; value lands in session one."
+
+# TG conditional gates — domain_stakes: low, so not applicable
+REQ-I1: { disposition: n-a }
+REQ-I2: { disposition: n-a }
+REQ-I3: { disposition: n-a }
+REQ-I4: { disposition: n-a }
+REQ-I5: { disposition: n-a }
+REQ-K1: { disposition: n-a }
+REQ-K2: { disposition: n-a }
+REQ-K3: { disposition: n-a }
+
+# Moat commitments — at least one with a concrete schema_feature
+moat_commitments:
+  - req_id: REQ-M1
+    schema_feature: "_portfolio/failure-catalog.md — the cross-cartridge failure/lesson catalog (Grows-Through-Use Zone); each cartridge close-out contributes new failure modes, so product #4's stack benefits from what shipping #1-3 taught. A data flywheel the platform cannot replicate without the operator's accumulated portfolio."
+  - req_id: REQ-M2
+    schema_feature: "The accumulated per-product stacks + the portfolio catalog become the operator's system of record for founding-document production — leaving Keel means leaving real, accumulated value (switching cost)."
