@@ -1,17 +1,17 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-engine-00-start-here
-title: "Keel Engine — 00 START HERE"
+Item_ID: baseplate-engine-00-start-here
+title: "Baseplate Engine — 00 START HERE"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-engine
+doc_type: baseplate-engine
 role: assistant-entry-point
 scope: subject-agnostic
 ---
 
-# 00 — START HERE (Keel Engine Entry Point)
+# 00 — START HERE (Baseplate Engine Entry Point)
 
 > **You are an AI assistant helping the operator produce a product's founding-document stack. You have no memory of prior sessions; this file and the files it points to are how you reconstruct context. Read them in order before doing anything else. This file is canonical; `AI-BOOTSTRAP.md` mirrors it as a thin pointer — if they disagree, this file wins and the drift is a defect to fix.**
 
@@ -42,7 +42,7 @@ Plus, if a cartridge is active: `<Product>/_ov-manifest.md`, `<Product>/_design-
 | `04-GENERATION-STANDARDS.md` | drafting any document |
 | `BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
 | `_templates/*` | generating a specific document |
-| `_meta/TRACEABILITY.md` | auditing Keel itself |
+| `_meta/TRACEABILITY.md` | auditing Baseplate itself |
 
 "Skim" is not a valid mode for Tier 1.
 

@@ -1,12 +1,12 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-engine-04-generation-standards
-title: "Keel Engine — 04 Generation Standards"
+Item_ID: baseplate-engine-04-generation-standards
+title: "Baseplate Engine — 04 Generation Standards"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-engine
+doc_type: baseplate-engine
 role: generation-standards
 scope: subject-agnostic
 ---
@@ -36,7 +36,7 @@ For each selected document, in dependency-layer order:
 3. Verify every named dependency as you write it; log each.
 4. Add the non-goals and the assumptions/open-questions sections.
 5. Run the document's **internal consistency pass**: every ID unique; every cross-reference inside the document resolves; no `[TBD]` outside the open-questions section.
-6. Advance the document's `keel_document_status` to `internally-consistent`.
+6. Advance the document's `baseplate_document_status` to `internally-consistent`.
 
 Only when every selected document is `internally-consistent` do you run the stack-level consistency audit (`05-GATES.md`).
 

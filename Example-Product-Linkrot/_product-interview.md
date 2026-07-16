@@ -1,10 +1,10 @@
 ---
-type: KEEL_Narrative_Document
+type: BASEPLATE_Narrative_Document
 Item_ID: linkrot-product-interview
 title: "Linkrot — Product Interview"
-keel_Product_Slug: "LR"
-keel_Doc_Class: product-interview
-keel_Layer: 0
+baseplate_Product_Slug: "LR"
+baseplate_Doc_Class: product-interview
+baseplate_Layer: 0
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false

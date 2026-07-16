@@ -1,12 +1,12 @@
 ---
-type: KEEL_Design_Document
+type: BASEPLATE_Design_Document
 Item_ID: linkrot-technical-design
 title: "Linkrot — Technical Design & CLI Interface Contract"
-keel_Product_Slug: "LR"
-keel_Doc_Class: tech-design
-keel_Layer: 3
-keel_Document_Status: audited
-keel_Precedence_Rank: 2
+baseplate_Product_Slug: "LR"
+baseplate_Doc_Class: tech-design
+baseplate_Layer: 3
+baseplate_Document_Status: audited
+baseplate_Precedence_Rank: 2
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false

@@ -1,13 +1,13 @@
 ---
-type: KEEL_Requirements_Document
+type: BASEPLATE_Requirements_Document
 Item_ID: linkrot-prd
 title: "Linkrot — PRD"
-keel_Product_Slug: "LR"
-keel_Doc_Class: prd
-keel_Layer: 1
-keel_ID_Scheme: "LR-FR-<n> / LR-NFR-<n>"
-keel_Document_Status: audited
-keel_Precedence_Rank: 1
+baseplate_Product_Slug: "LR"
+baseplate_Doc_Class: prd
+baseplate_Layer: 1
+baseplate_ID_Scheme: "LR-FR-<n> / LR-NFR-<n>"
+baseplate_Document_Status: audited
+baseplate_Precedence_Rank: 1
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false

@@ -1,12 +1,12 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Narrative_Document
+type: BASEPLATE_Narrative_Document
 title: "<Product> — <Brief | BRD | PR-FAQ | Product Interview>"
-keel_Product_Slug: ""
-keel_Doc_Class: ""          # product-brief | brd | pr-faq | product-interview
-keel_Layer: 0               # 0 for L0 narrative; product-interview is the cartridge's elicitation record
-keel_Document_Status: drafting
-keel_Precedence_Rank:
+baseplate_Product_Slug: ""
+baseplate_Doc_Class: ""          # product-brief | brd | pr-faq | product-interview
+baseplate_Layer: 0               # 0 for L0 narrative; product-interview is the cartridge's elicitation record
+baseplate_Document_Status: drafting
+baseplate_Precedence_Rank:
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -27,8 +27,8 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `<doc-class>.md` (e.g. `brief.md`, `_product-interview.md`).
-- **Type value:** `type: KEEL_Narrative_Document`.
+- **Type value:** `type: BASEPLATE_Narrative_Document`.
 
 ## Relationships
 
-- `KEEL_Selection_Record` — *the product-interview's PI-answers are cited by every selection decision*.
+- `BASEPLATE_Selection_Record` — *the product-interview's PI-answers are cited by every selection decision*.

@@ -1,20 +1,20 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-operator-guide
-title: "Keel — Operator Guide"
+Item_ID: baseplate-operator-guide
+title: "Baseplate — Operator Guide"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
 ---
 
-# Keel — Operator Guide
+# Baseplate — Operator Guide
 
 ## Engine vs your work (the content zones)
 
 `git pull` updates the engine without touching your work, because the two never share paths:
 
-- **Engine / Shipped Examples** (release-owned): `_keel-engine/`, `_types/`, the front-door docs, `Example-Product-*/`. Don't hand-edit — customize via your own cartridges.
+- **Engine / Shipped Examples** (release-owned): `_baseplate-engine/`, `_types/`, the front-door docs, `Example-Product-*/`. Don't hand-edit — customize via your own cartridges.
 - **Your product cartridges** (`<Product-Name>/`): yours; the OV is designed to be extended here.
 - **Your private work** (`_USER.md`, `<Product>/Sessions/`, `<Product>/_design-state.md`): gitignored, never tracked.
 - **The portfolio catalog** (`_portfolio/failure-catalog.md`, Grows-Through-Use Zone): ships seeded; your appended entries are preserved on update via stash/merge — never clobbered.

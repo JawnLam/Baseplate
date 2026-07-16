@@ -1,16 +1,16 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-posture
-title: "Keel — Standalone Sufficiency Posture"
+Item_ID: baseplate-posture
+title: "Baseplate — Standalone Sufficiency Posture"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
 ---
 
-# Keel — Standalone Sufficiency Posture
+# Baseplate — Standalone Sufficiency Posture
 
-> Why use Keel instead of a general LLM? The answer rests on the substrate (the 47-requirement standalone-sufficiency framework), not a sales pitch. Source of truth: `_meta/posture.yaml`. Scorecard: `_meta/vetting-rubric-filled.md`.
+> Why use Baseplate instead of a general LLM? The answer rests on the substrate (the 47-requirement standalone-sufficiency framework), not a sales pitch. Source of truth: `_meta/posture.yaml`. Scorecard: `_meta/vetting-rubric-filled.md`.
 
 ## The two master tests (answered)
 

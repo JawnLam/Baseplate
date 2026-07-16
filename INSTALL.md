@@ -1,26 +1,26 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-install
-title: "Keel — Install"
+Item_ID: baseplate-install
+title: "Baseplate — Install"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
 ---
 
-# Install Keel
+# Install Baseplate
 
 ## 1. Clone into a version-named folder
 
 ```bash
-git clone https://github.com/JawnLam/Keel.git ~/path/to/Keel-v0.1
-cd ~/path/to/Keel-v0.1
+git clone https://github.com/JawnLam/Baseplate.git ~/path/to/Baseplate-v0.1
+cd ~/path/to/Baseplate-v0.1
 # Disable push so you never accidentally upload your product cartridges
 git remote set-url --push origin DISABLED_TO_PREVENT_ACCIDENTAL_PUSH_OF_PERSONAL_WORK
 git remote -v   # fetch = real URL; push = DISABLED_...
 ```
 
-The folder is named `Keel-v<major>.<minor>`. On a major.minor release, rename it to match (`mv Keel-v0.1 Keel-v0.2`); `CHANGELOG.md` announces the transition.
+The folder is named `Baseplate-v<major>.<minor>`. On a major.minor release, rename it to match (`mv Baseplate-v0.1 Baseplate-v0.2`); `CHANGELOG.md` announces the transition.
 
 ## 2. Point an AI at it
 
@@ -31,7 +31,7 @@ Open the folder in any AI environment that reads local markdown (Claude Code, Cu
 ## Updating
 
 ```bash
-cd ~/path/to/Keel-v<major>.<minor>
+cd ~/path/to/Baseplate-v<major>.<minor>
 git fetch origin
 git log --oneline HEAD..origin/main          # preview incoming
 

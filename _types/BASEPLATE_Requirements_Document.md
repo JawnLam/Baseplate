@@ -1,13 +1,13 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Requirements_Document
+type: BASEPLATE_Requirements_Document
 title: "<Product> — <PRD | Functional Spec | SRS | Acceptance Criteria>"
-keel_Product_Slug: ""
-keel_Doc_Class: ""          # prd | functional-spec | srs | acceptance-criteria
-keel_Layer: 1
-keel_ID_Scheme: ""          # e.g. ACME-FR-<n>, ACME-NFR-<n>
-keel_Document_Status: drafting   # drafting | internally-consistent | audited | stranger-passed | shipped
-keel_Precedence_Rank:       # integer; lower wins on conflict per the stack precedence declaration
+baseplate_Product_Slug: ""
+baseplate_Doc_Class: ""          # prd | functional-spec | srs | acceptance-criteria
+baseplate_Layer: 1
+baseplate_ID_Scheme: ""          # e.g. ACME-FR-<n>, ACME-NFR-<n>
+baseplate_Document_Status: drafting   # drafting | internally-consistent | audited | stranger-passed | shipped
+baseplate_Precedence_Rank:       # integer; lower wins on conflict per the stack precedence declaration
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -41,9 +41,9 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `<doc-class>.md` (e.g. `prd.md`) in the cartridge `Artifacts/`.
-- **Type value:** `type: KEEL_Requirements_Document`.
+- **Type value:** `type: BASEPLATE_Requirements_Document`.
 
 ## Relationships
 
-- `KEEL_Verification_Document` — *verified-by (each requirement ID maps to a verification)*.
-- `KEEL_Selection_Record` — *earned-by (the interview answer that included this document)*.
+- `BASEPLATE_Verification_Document` — *verified-by (each requirement ID maps to a verification)*.
+- `BASEPLATE_Selection_Record` — *earned-by (the interview answer that included this document)*.

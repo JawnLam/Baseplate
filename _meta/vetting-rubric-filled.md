@@ -1,14 +1,14 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-vetting-rubric
-title: "Keel — Vetting Rubric (filled)"
+Item_ID: baseplate-vetting-rubric
+title: "Baseplate — Vetting Rubric (filled)"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
 ---
 
-# Keel — Vetting Rubric (0–3 scorecard)
+# Baseplate — Vetting Rubric (0–3 scorecard)
 
 > Rendered from `_meta/posture.yaml` through the standalone-sufficiency vetting rubric. Scale: 0 (absent) / 1 (weak) / 2 (solid) / 3 (strong).
 

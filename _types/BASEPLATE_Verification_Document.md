@@ -1,12 +1,12 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Verification_Document
+type: BASEPLATE_Verification_Document
 title: "<Product> — <Test Plan | Acceptance Test Plan | Traceability Matrix>"
-keel_Product_Slug: ""
-keel_Doc_Class: ""          # test-plan | acceptance-test-plan | traceability-matrix
-keel_Layer: 4
-keel_Document_Status: drafting
-keel_Precedence_Rank:
+baseplate_Product_Slug: ""
+baseplate_Doc_Class: ""          # test-plan | acceptance-test-plan | traceability-matrix
+baseplate_Layer: 4
+baseplate_Document_Status: drafting
+baseplate_Precedence_Rank:
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -36,8 +36,8 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `traceability-matrix.md`, `acceptance-test-plan.md`, `test-plan.md` in `Artifacts/`.
-- **Type value:** `type: KEEL_Verification_Document`.
+- **Type value:** `type: BASEPLATE_Verification_Document`.
 
 ## Relationships
 
-- `KEEL_Requirements_Document` — *verifies (every requirement ID resolves here)*.
+- `BASEPLATE_Requirements_Document` — *verifies (every requirement ID resolves here)*.

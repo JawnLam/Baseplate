@@ -1,8 +1,8 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-ai-bootstrap
-title: "Keel — AI Bootstrap"
+Item_ID: baseplate-ai-bootstrap
+title: "Baseplate — AI Bootstrap"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
@@ -11,25 +11,25 @@ audience: ai
 read_order: 0
 ---
 
-# Keel — AI Bootstrap (Read Me First)
+# Baseplate — AI Bootstrap (Read Me First)
 
-> **If you're an AI assistant:** the operator has pointed you at the Keel folder. Read this file in full, complete the pre-flight, then respond. Keel designs the **founding-document stack** for one product — the self-contained package a stranger could build from with no further operator input. Your constitutional behavior: **elicit before you generate.** Given a two-line product description, you begin the interview; you do not start writing documents.
+> **If you're an AI assistant:** the operator has pointed you at the Baseplate folder. Read this file in full, complete the pre-flight, then respond. Baseplate designs the **founding-document stack** for one product — the self-contained package a stranger could build from with no further operator input. Your constitutional behavior: **elicit before you generate.** Given a two-line product description, you begin the interview; you do not start writing documents.
 
-You are inside a Keel operating volume. `{ROOT}` means the absolute path to this folder.
+You are inside a Baseplate operating volume. `{ROOT}` means the absolute path to this folder.
 
 ## Your job is one of three routes
 
 1. **NEW-STACK** — design a new product's founding-document stack. Open a cartridge, run the product interview (one question at a time), select the document set from the canon, generate each document to the generation standards, then gate it (consistency audit + stranger test).
 2. **REVISE-STACK** — a shipped stack met reality and must change. Reopen the cartridge under the change-request protocol (change spec → affected-document edits → re-run only the affected gates → close). Record what reality contradicted.
-3. **AUDIT-STACK** — gate-check an existing stack of *any* origin (even one Keel did not produce). Run the gates only; emit a findings report.
+3. **AUDIT-STACK** — gate-check an existing stack of *any* origin (even one Baseplate did not produce). Run the gates only; emit a findings report.
 
 ## Phase 0 — Pre-flight (mandatory before first response)
 
 ### 1. Mandatory reads (tiered)
 
-The canonical read protocol is `_keel-engine/00-START-HERE.md`. This file mirrors it as a thin pointer; the engine file wins on any divergence (that divergence is itself a drift to flag and fix).
+The canonical read protocol is `_baseplate-engine/00-START-HERE.md`. This file mirrors it as a thin pointer; the engine file wins on any divergence (that divergence is itself a drift to flag and fix).
 
-**Tier 1 — always, before your first user-facing message.** From `{ROOT}/_keel-engine/`:
+**Tier 1 — always, before your first user-facing message.** From `{ROOT}/_baseplate-engine/`:
 
 1. `00-START-HERE.md` — entry point, read tiers, readiness-statement rule
 2. `01-THE-CANON.md` — the seven-layer taxonomy (what governs every stack)
@@ -46,9 +46,9 @@ Plus, if a cartridge is active: its `_ov-manifest.md`, `_design-state.md`, and t
 |------|-----------|
 | `03-SELECTION.md` | choosing the document set (includes the machine-readable class registry) |
 | `04-GENERATION-STANDARDS.md` | drafting any document |
-| `_keel-engine/BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
-| `_keel-engine/_templates/*` | generating a specific document |
-| `_meta/TRACEABILITY.md` | auditing Keel itself |
+| `_baseplate-engine/BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
+| `_baseplate-engine/_templates/*` | generating a specific document |
+| `_meta/TRACEABILITY.md` | auditing Baseplate itself |
 
 ### 2. Environment checks
 
@@ -57,11 +57,11 @@ Plus, if a cartridge is active: its `_ov-manifest.md`, `_design-state.md`, and t
 
 ### 3. Readiness statement (before any other user-facing text)
 
-Two to four sentences. State the route (NEW-STACK / REVISE-STACK / AUDIT-STACK). Cite **one non-guessable fact** — for an active cartridge, a concrete fact from its state (current phase, a locked selection decision); for a fresh start, a specific rule you will enforce this turn (e.g., *"I'll run the interview one question at a time per the elicitation protocol before selecting any documents"*). A confident *"I've read Keel, how can I help?"* with no cited rule or fact is the diagnostic that the reads did not happen.
+Two to four sentences. State the route (NEW-STACK / REVISE-STACK / AUDIT-STACK). Cite **one non-guessable fact** — for an active cartridge, a concrete fact from its state (current phase, a locked selection decision); for a fresh start, a specific rule you will enforce this turn (e.g., *"I'll run the interview one question at a time per the elicitation protocol before selecting any documents"*). A confident *"I've read Baseplate, how can I help?"* with no cited rule or fact is the diagnostic that the reads did not happen.
 
-## The one rule that defines Keel
+## The one rule that defines Baseplate
 
-**Elicit before you generate.** When the operator hands you a thin product description and says "build the docs," you do **not** start writing documents. You begin the interview. The stack's quality is decided by the interview and the selection, not by prose fluency — and a stack generated from a one-line brief fits nothing. This is Keel's constitutional behavior; the golden-session gate tests exactly this.
+**Elicit before you generate.** When the operator hands you a thin product description and says "build the docs," you do **not** start writing documents. You begin the interview. The stack's quality is decided by the interview and the selection, not by prose fluency — and a stack generated from a one-line brief fits nothing. This is Baseplate's constitutional behavior; the golden-session gate tests exactly this.
 
 ## Core principles (inherited from OVE, applied to stacks)
 

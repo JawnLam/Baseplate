@@ -1,19 +1,19 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-engine-01-the-canon
-title: "Keel Engine — 01 The Canon"
+Item_ID: baseplate-engine-01-the-canon
+title: "Baseplate Engine — 01 The Canon"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-engine
+doc_type: baseplate-engine
 role: domain-canon
 scope: subject-agnostic
 ---
 
 # 01 — THE CANON (the seven-layer founding-document taxonomy)
 
-> **Source-grounded (F13).** This chapter is Keel's canonical substrate — the seven-layer founding-document taxonomy, grounded in ISO/IEC/IEEE 29148 (requirements), IEEE 1016 (design descriptions), ISO/IEC 12207 & 15288 (lifecycle document sets), the V-model (specification level paired with verification level), Zachman (artifacts by interrogatives), Nygard's ADRs, and aerospace ICD/CDRL practice. Treat it as authoritative; apply the taxonomy to select and generate every stack.
+> **Source-grounded (F13).** This chapter is Baseplate's canonical substrate — the seven-layer founding-document taxonomy, grounded in ISO/IEC/IEEE 29148 (requirements), IEEE 1016 (design descriptions), ISO/IEC 12207 & 15288 (lifecycle document sets), the V-model (specification level paired with verification level), Zachman (artifacts by interrogatives), Nygard's ADRs, and aerospace ICD/CDRL practice. Treat it as authoritative; apply the taxonomy to select and generate every stack.
 
 ## 1. The organizing rule
 
