@@ -1,0 +1,16 @@
+# Keel — Operator-Private Zone patterns (Convention 8; see CONTRIBUTING.md § Content zones)
+
+# Operator profile — never tracked, never auto-inferred (P7 / ONF-4)
+_USER.md
+
+# Per-cartridge working state and session logs (operator's active work)
+*/Sessions/
+*/_design-state.md
+*/_dependency-log.md
+
+# Filesystem / workspace noise
+.DS_Store
+.obsidian/
+
+# NOTE: the Grows-Through-Use Zone (_portfolio/failure-catalog.md) is intentionally
+# NOT ignored — it ships seeded and is merge-updated, not clobbered, on git pull.
