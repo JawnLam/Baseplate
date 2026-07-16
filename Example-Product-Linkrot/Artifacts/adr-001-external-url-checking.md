@@ -1,12 +1,12 @@
 ---
-type: KEEL_Design_Document
+type: BASEPLATE_Design_Document
 Item_ID: linkrot-adr-001
 title: "Linkrot — ADR-001 — External URL checking is opt-in"
-keel_Product_Slug: "LR"
-keel_Doc_Class: adr
-keel_Layer: 2
-keel_Document_Status: audited
-keel_Precedence_Rank: 3
+baseplate_Product_Slug: "LR"
+baseplate_Doc_Class: adr
+baseplate_Layer: 2
+baseplate_Document_Status: audited
+baseplate_Precedence_Rank: 3
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false

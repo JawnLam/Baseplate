@@ -1,12 +1,12 @@
 ---
-type: KEEL_Contract_Document
+type: BASEPLATE_Contract_Document
 Item_ID: linkrot-license
 title: "Linkrot — License"
-keel_Product_Slug: "LR"
-keel_Doc_Class: license
-keel_Layer: 6
-keel_Document_Status: audited
-keel_Precedence_Rank: 6
+baseplate_Product_Slug: "LR"
+baseplate_Doc_Class: license
+baseplate_Layer: 6
+baseplate_Document_Status: audited
+baseplate_Precedence_Rank: 6
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false

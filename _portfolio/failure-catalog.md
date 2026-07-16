@@ -1,17 +1,17 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-portfolio-failure-catalog
-title: "Keel — Portfolio Failure Catalog"
+Item_ID: baseplate-portfolio-failure-catalog
+title: "Baseplate — Portfolio Failure Catalog"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-portfolio
+doc_type: baseplate-portfolio
 role: failure-catalog
 scope: cross-cartridge
 ---
 
-# Keel — Portfolio Failure Catalog
+# Baseplate — Portfolio Failure Catalog
 
 > **The compounding asset (the moat, REQ-M1).** Cross-cartridge failure/lesson log in the F-code idiom. Loaded at every cartridge session start; guard against every entry. Appended at each cartridge close-out with any new failure mode the engagement surfaced (OFR-12/13). This file lives in the **Grows-Through-Use Zone** (`_portfolio/`, D-5): the release ships the seed entries below; the operator's use grows the rest; `git pull` must merge-not-clobber (see `CONTRIBUTING.md` § Content zones).
 
@@ -51,7 +51,7 @@ Each entry: name, trigger, why it matters, fix, prevention. Seeded with the five
 
 **Trigger:** A document or requirement is included because it is customary, not because a product-shape signal earned it — it fails the "would the stranger need this?" test.
 
-**Why it matters:** Unearned documents cost generation and maintenance effort, couple change-rates that should be independent, and dilute the stack the stranger must read. (Keel applies this to itself: this is why the Type set is structural + registry, not one-Type-per-class.)
+**Why it matters:** Unearned documents cost generation and maintenance effort, couple change-rates that should be independent, and dilute the stack the stranger must read. (Baseplate applies this to itself: this is why the Type set is structural + registry, not one-Type-per-class.)
 
 **Fix:** Remove the unearned document/requirement, or record the interview answer that earns it.
 

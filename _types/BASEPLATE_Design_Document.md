@@ -1,12 +1,12 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Design_Document
+type: BASEPLATE_Design_Document
 title: "<Product> — <Architecture | ADR | Tech Design | Interface Contract | Data Dictionary | UX Spec | Threat Model>"
-keel_Product_Slug: ""
-keel_Doc_Class: ""          # architecture | adr | tech-design | interface-contract | data-dictionary | ux-spec | threat-model
-keel_Layer: 2               # 2 (architecture/ADR/threat) or 3 (design/interface/data/UX)
-keel_Document_Status: drafting
-keel_Precedence_Rank:
+baseplate_Product_Slug: ""
+baseplate_Doc_Class: ""          # architecture | adr | tech-design | interface-contract | data-dictionary | ux-spec | threat-model
+baseplate_Layer: 2               # 2 (architecture/ADR/threat) or 3 (design/interface/data/UX)
+baseplate_Document_Status: drafting
+baseplate_Precedence_Rank:
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -34,9 +34,9 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `<doc-class>.md` (e.g. `architecture.md`, `adr-001-<slug>.md`) in `Artifacts/`.
-- **Type value:** `type: KEEL_Design_Document`.
+- **Type value:** `type: BASEPLATE_Design_Document`.
 
 ## Relationships
 
-- `KEEL_Requirements_Document` — *realizes (design serves the requirements; L4 verifies L1, not this)*.
-- `KEEL_Selection_Record` — *earned-by*.
+- `BASEPLATE_Requirements_Document` — *realizes (design serves the requirements; L4 verifies L1, not this)*.
+- `BASEPLATE_Selection_Record` — *earned-by*.

@@ -1,12 +1,12 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-engine-bootstrap-new-stack
-title: "Keel Engine — Bootstrap New Stack"
+Item_ID: baseplate-engine-bootstrap-new-stack
+title: "Baseplate Engine — Bootstrap New Stack"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-engine
+doc_type: baseplate-engine
 role: cartridge-bootstrapping-prompt
 scope: subject-agnostic
 ---
@@ -37,7 +37,7 @@ Run the product interview one question at a time. Capture PI-1..PI-12 in `_produ
 
 ## Step 3 — Select (`03-SELECTION.md`)
 
-Walk the class registry against the interview answers. Record every inclusion and exclusion with its triggering PI-answer in a `KEEL_Selection_Record`. Lock the ID scheme and precedence declaration. **Selection locks before any drafting (F8).**
+Walk the class registry against the interview answers. Record every inclusion and exclusion with its triggering PI-answer in a `BASEPLATE_Selection_Record`. Lock the ID scheme and precedence declaration. **Selection locks before any drafting (F8).**
 
 ## Step 4 — Generate (`04-GENERATION-STANDARDS.md`)
 
@@ -45,7 +45,7 @@ Draft each selected document from its structural Type and required sections, in 
 
 ## Step 5 — Gate (`05-GATES.md`)
 
-Run the consistency audit, then the stranger test with a fresh instance. Any `stack-should-answer` question blocks ship — fix and rerun. Log the stranger test in a `KEEL_Stranger_Test_Log`.
+Run the consistency audit, then the stranger test with a fresh instance. Any `stack-should-answer` question blocks ship — fix and rerun. Log the stranger test in a `BASEPLATE_Stranger_Test_Log`.
 
 ## Step 6 — Close-out
 

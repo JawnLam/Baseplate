@@ -1,12 +1,12 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Operations_Document
+type: BASEPLATE_Operations_Document
 title: "<Product> — <Runbook | SLO Definitions>"
-keel_Product_Slug: ""
-keel_Doc_Class: ""          # runbook | slo
-keel_Layer: 5
-keel_Document_Status: drafting
-keel_Precedence_Rank:
+baseplate_Product_Slug: ""
+baseplate_Doc_Class: ""          # runbook | slo
+baseplate_Layer: 5
+baseplate_Document_Status: drafting
+baseplate_Precedence_Rank:
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -25,8 +25,8 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `runbook.md`, `slo.md` in `Artifacts/`.
-- **Type value:** `type: KEEL_Operations_Document`.
+- **Type value:** `type: BASEPLATE_Operations_Document`.
 
 ## Relationships
 
-- `KEEL_Design_Document` — *operationalizes (the runbook runs what the design specifies)*.
+- `BASEPLATE_Design_Document` — *operationalizes (the runbook runs what the design specifies)*.

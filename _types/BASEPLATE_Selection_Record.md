@@ -1,10 +1,10 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Selection_Record
+type: BASEPLATE_Selection_Record
 title: "<Product> — Selection Record"
-keel_Product_Slug: ""
-keel_ID_Scheme: ""          # e.g. ACME-FR-<n> — S-3, extractable
-keel_Precedence_Declaration: ""   # ordered list of doc classes, lower index wins on conflict — S-3, extractable
+baseplate_Product_Slug: ""
+baseplate_ID_Scheme: ""          # e.g. ACME-FR-<n> — S-3, extractable
+baseplate_Precedence_Declaration: ""   # ordered list of doc classes, lower index wins on conflict — S-3, extractable
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -36,4 +36,4 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `_selection-record.md` in the cartridge (not inside `Artifacts/` unless the stranger should see it).
-- **Type value:** `type: KEEL_Selection_Record`.
+- **Type value:** `type: BASEPLATE_Selection_Record`.

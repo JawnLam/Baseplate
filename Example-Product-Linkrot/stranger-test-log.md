@@ -1,12 +1,12 @@
 ---
-type: KEEL_Stranger_Test_Log
+type: BASEPLATE_Stranger_Test_Log
 Item_ID: linkrot-stranger-test-log
 title: "Linkrot — Stranger Test Log"
-keel_Product_Slug: "LR"
-keel_Stranger_Model: "Fresh Claude instance (no drafting context)"
-keel_Run_Date: 2026-07-16
-keel_Rerun_Count: 3
-keel_Result: "run-1 blocked; run-2 blocked (deeper, over-adversarial prompt); run-3 PASS (canonical prompt, scope narrowed). Converged."
+baseplate_Product_Slug: "LR"
+baseplate_Stranger_Model: "Fresh Claude instance (no drafting context)"
+baseplate_Run_Date: 2026-07-16
+baseplate_Rerun_Count: 3
+baseplate_Result: "run-1 blocked; run-2 blocked (deeper, over-adversarial prompt); run-3 PASS (canonical prompt, scope narrowed). Converged."
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
@@ -14,7 +14,7 @@ Needs_Processing: false
 
 # Linkrot — Stranger Test Log
 
-> Gate 2 (`_keel-engine/05-GATES.md`). A fresh instance received only the frozen `Artifacts/` stack and the fixed prompt. This log lives at the cartridge level (not inside the buildable `Artifacts/` folder) — it is a gate record, not a founding document the builder needs.
+> Gate 2 (`_baseplate-engine/05-GATES.md`). A fresh instance received only the frozen `Artifacts/` stack and the fixed prompt. This log lives at the cartridge level (not inside the buildable `Artifacts/` folder) — it is a gate record, not a founding document the builder needs.
 
 ## Run 1 — 2026-07-16 — BLOCKED
 
@@ -80,9 +80,9 @@ Reaching a clean pass is another 1–2 revision rounds (specify the regex-vs-rea
 
 **Result: PASS.** Linkrot is a stranger-test-passed worked example.
 
-## Finding for Keel (gate calibration)
+## Finding for Baseplate (gate calibration)
 
-The three runs together establish that **the stranger test converges**, and surface a real calibration lesson: the *evaluator's stance* changes the result. Run 2's 24 findings were inflated by an over-adversarial prompt (I asked it to classify-and-count exhaustively); run 3 with the canonical gentle prompt on a modestly-narrowed stack passed cleanly. **Candidate Keel refinement** (logged to `_portfolio/failure-catalog.md` under PF-6): `05-GATES.md` should state that the fixed prompt is used verbatim and the evaluator reads *charitably* (an operator-only question is one a competent builder would take to the operator, not one an adversary could invent) — otherwise the gate is unreproducible. This is the shakedown's most valuable engine-level deliverable.
+The three runs together establish that **the stranger test converges**, and surface a real calibration lesson: the *evaluator's stance* changes the result. Run 2's 24 findings were inflated by an over-adversarial prompt (I asked it to classify-and-count exhaustively); run 3 with the canonical gentle prompt on a modestly-narrowed stack passed cleanly. **Candidate Baseplate refinement** (logged to `_portfolio/failure-catalog.md` under PF-6): `05-GATES.md` should state that the fixed prompt is used verbatim and the evaluator reads *charitably* (an operator-only question is one a competent builder would take to the operator, not one an adversary could invent) — otherwise the gate is unreproducible. This is the shakedown's most valuable engine-level deliverable.
 
 ### Portfolio catalog
 

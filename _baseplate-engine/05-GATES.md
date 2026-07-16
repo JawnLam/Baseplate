@@ -1,12 +1,12 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-engine-05-gates
-title: "Keel Engine — 05 Gates"
+Item_ID: baseplate-engine-05-gates
+title: "Baseplate Engine — 05 Gates"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-engine
+doc_type: baseplate-engine
 role: gates
 scope: subject-agnostic
 ---
@@ -27,7 +27,7 @@ Mechanical checklist over the frozen `Artifacts/` folder. Every item is a hard c
 - [ ] **Anti-staleness marks present.** Every imported fact carries its source + verification date.
 - [ ] **Non-goals present** in every requirements-bearing document.
 
-Any unchecked box: fix, or operator-waive with a written reason in `_decisions.md`. Then re-run. Advance each document to `keel_document_status: audited`.
+Any unchecked box: fix, or operator-waive with a written reason in `_decisions.md`. Then re-run. Advance each document to `baseplate_document_status: audited`.
 
 ## Gate 2 — The Stranger Test (the ship gate — the heart)
 
@@ -42,7 +42,7 @@ Operationalizes the stack's defining claim: **buildable by a stranger with no fu
    - **ST-1 Restatement fidelity** — (a) matches the operator's intent. A misreading is a stack defect, not a stranger defect.
    - **ST-2 Plan plausibility** — (b) is a reasonable phase-one plan consistent with the stack's own sequencing and gates.
    - **ST-3 Question classification — the pass rule** — classify every question in (c) as `operator-only` (credentials, taste, business decisions, information genuinely unavailable at ship time) or `stack-should-answer`. **Any `stack-should-answer` question is a ship block:** fix the stack, rerun with a fresh instance.
-4. **Log** the run in a `KEEL_Stranger_Test_Log`: stranger model + date, verbatim outputs archived, per-criterion results, the question-classification table, and the rerun count.
+4. **Log** the run in a `BASEPLATE_Stranger_Test_Log`: stranger model + date, verbatim outputs archived, per-criterion results, the question-classification table, and the rerun count.
 
 ### Anti-gaming rules
 
@@ -67,7 +67,7 @@ A shipped stack meets reality and must change. Do not hand-edit ad hoc. Run the 
 
 ## AUDIT-STACK
 
-For a stack of any origin (even one Keel did not produce): run Gate 1 and Gate 2 as read-only checks and emit a findings report. Do not edit the stack — report what fails, classified by gate criterion.
+For a stack of any origin (even one Baseplate did not produce): run Gate 1 and Gate 2 as read-only checks and emit a findings report. Do not edit the stack — report what fails, classified by gate criterion.
 
 ## Close-out (every session type)
 

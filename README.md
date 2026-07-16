@@ -1,19 +1,19 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-readme
-title: "Keel — README"
+Item_ID: baseplate-readme
+title: "Baseplate — README"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
 ---
 
-# Keel
+# Baseplate
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](VERSION.md)
 
-Keel turns the seven-layer founding-document canon into an enforced discipline: point an AI at this folder, describe a product, and it interviews you, selects exactly the documents that product earns, generates them to a verifiable standard, and blocks the ship until a **stranger** — a fresh model instance handed only the folder — can build from it.
+Baseplate turns the seven-layer founding-document canon into an enforced discipline: point an AI at this folder, describe a product, and it interviews you, selects exactly the documents that product earns, generates them to a verifiable standard, and blocks the ship until a **stranger** — a fresh model instance handed only the folder — can build from it.
 
 ## Quick start
 
@@ -30,7 +30,7 @@ The AI will start by interviewing you, one question at a time. It will *not* sta
 ## What this is not
 
 - Not a document-template pack. Templates are commodity scaffolding; the durable value is the gates and the accumulating failure catalog.
-- Not a product builder. The stack is the terminal artifact; Keel does not build the product.
+- Not a product builder. The stack is the terminal artifact; Baseplate does not build the product.
 - Not opinionated about your product. The engine is subject-agnostic; the product is a parameter of the cartridge.
 
 ## Folder structure
@@ -38,20 +38,20 @@ The AI will start by interviewing you, one question at a time. It will *not* sta
 | Path | Contents |
 |------|----------|
 | `AI-BOOTSTRAP.md` | AI entry point |
-| `_keel-engine/` | The canon + protocols: `00-START-HERE`, `01-THE-CANON`, `02-ELICITATION`, `03-SELECTION`, `04-GENERATION-STANDARDS`, `05-GATES`, `BOOTSTRAP-NEW-STACK` |
+| `_baseplate-engine/` | The canon + protocols: `00-START-HERE`, `01-THE-CANON`, `02-ELICITATION`, `03-SELECTION`, `04-GENERATION-STANDARDS`, `05-GATES`, `BOOTSTRAP-NEW-STACK` |
 | `_types/` | The eight structural document Types |
 | `_portfolio/` | The cross-cartridge failure catalog (Grows-Through-Use Zone) |
 | `_meta/` | Posture, traceability matrix, golden-session log, validator |
 | `<Product-Name>/` | Your product cartridges |
 
-The four OVE content zones plus Keel's Grows-Through-Use Zone are declared in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Content zones.
+The four OVE content zones plus Baseplate's Grows-Through-Use Zone are declared in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Content zones.
 
 ## System requirements
 
 - Any capable AI that reads markdown and parses YAML frontmatter (Claude, GPT-4-class+, Gemini 2.x+).
 - **No runtime dependencies.** The OV form is plain markdown; a human and an AI run it with zero code execution.
 
-**Tooling posture.** The optional `_keel-engine/_meta/validate.py` (Python 3.7+ stdlib) is convenience automation, not a dependency — every check it runs has a manual equivalent in `_keel-engine/_meta/VALIDATION-CHECKLIST.md`, and the two gates (consistency audit, stranger test) are runnable by a human with a text editor and a second chat window. Inherited from OVE's tooling-posture doctrine.
+**Tooling posture.** The optional `_baseplate-engine/_meta/validate.py` (Python 3.7+ stdlib) is convenience automation, not a dependency — every check it runs has a manual equivalent in `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md`, and the two gates (consistency audit, stranger test) are runnable by a human with a text editor and a second chat window. Inherited from OVE's tooling-posture doctrine.
 
 ## License
 

@@ -1,12 +1,12 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-engine-02-elicitation
-title: "Keel Engine — 02 Elicitation"
+Item_ID: baseplate-engine-02-elicitation
+title: "Baseplate Engine — 02 Elicitation"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
-doc_type: keel-engine
+doc_type: baseplate-engine
 role: interview-protocol
 scope: subject-agnostic
 ---
@@ -45,7 +45,7 @@ Capture each, with enough specificity that a selection decision can cite it:
 
 ## Output
 
-Write `_product-interview.md` (Type `KEEL_Narrative_Document`, `keel_Doc_Class: product-interview`). Every PI answer is a labeled, citable line. The selection protocol (`03-SELECTION.md`) cites these labels by ID when it records why each document was included or excluded (OFR-4).
+Write `_product-interview.md` (Type `BASEPLATE_Narrative_Document`, `baseplate_Doc_Class: product-interview`). Every PI answer is a labeled, citable line. The selection protocol (`03-SELECTION.md`) cites these labels by ID when it records why each document was included or excluded (OFR-4).
 
 ## Do not
 

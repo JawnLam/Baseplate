@@ -1,12 +1,12 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Stranger_Test_Log
+type: BASEPLATE_Stranger_Test_Log
 title: "<Product> — Stranger Test Log"
-keel_Product_Slug: ""
-keel_Stranger_Model: ""     # model family/version of the fresh instance (ideally different family than drafter)
-keel_Run_Date:
-keel_Rerun_Count: 0
-keel_Result: ""             # pass | blocked
+baseplate_Product_Slug: ""
+baseplate_Stranger_Model: ""     # model family/version of the fresh instance (ideally different family than drafter)
+baseplate_Run_Date:
+baseplate_Rerun_Count: 0
+baseplate_Result: ""             # pass | blocked
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -42,4 +42,4 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `stranger-test-log.md` in the cartridge `Artifacts/`.
-- **Type value:** `type: KEEL_Stranger_Test_Log`.
+- **Type value:** `type: BASEPLATE_Stranger_Test_Log`.

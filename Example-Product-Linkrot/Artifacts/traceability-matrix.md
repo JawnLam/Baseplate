@@ -1,12 +1,12 @@
 ---
-type: KEEL_Verification_Document
+type: BASEPLATE_Verification_Document
 Item_ID: linkrot-traceability-matrix
 title: "Linkrot — Traceability Matrix"
-keel_Product_Slug: "LR"
-keel_Doc_Class: traceability-matrix
-keel_Layer: 4
-keel_Document_Status: audited
-keel_Precedence_Rank: 4
+baseplate_Product_Slug: "LR"
+baseplate_Doc_Class: traceability-matrix
+baseplate_Layer: 4
+baseplate_Document_Status: audited
+baseplate_Precedence_Rank: 4
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false

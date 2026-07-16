@@ -1,27 +1,27 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: keel-contributing
-title: "Keel — Contributing"
+Item_ID: baseplate-contributing
+title: "Baseplate — Contributing"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16
 Needs_Processing: false
 ---
 
-# Contributing to Keel
+# Contributing to Baseplate
 
-Keel ships at v0.1.0. This document says what is in-scope without a major bump, what requires one, and the content-zone boundary that keeps `git pull` from clobbering your work.
+Baseplate ships at v0.1.0. This document says what is in-scope without a major bump, what requires one, and the content-zone boundary that keeps `git pull` from clobbering your work.
 
 ## Content zones
 
-Keel declares the four OVE-canonical content zones plus a **fifth zone** for the portfolio catalog.
+Baseplate declares the four OVE-canonical content zones plus a **fifth zone** for the portfolio catalog.
 
 ### Engine Zone — release-owned; updated by `git pull`
 
 | Path pattern | Notes |
 |--------------|-------|
 | `README.md`, `AI-BOOTSTRAP.md`, `INSTALL.md`, `OPERATOR-GUIDE.md`, `CONTRIBUTING.md`, `LICENSE.md`, `VERSION.md`, `CHANGELOG.md`, `UPDATE-PROMPT.md` | Front-door docs |
-| `_keel-engine/**` | Engine prose (the canon, elicitation, selection, generation standards, gates), templates, meta, validator |
+| `_baseplate-engine/**` | Engine prose (the canon, elicitation, selection, generation standards, gates), templates, meta, validator |
 | `_types/**` | The eight structural Type definitions (Convention 6) |
 | `.gitignore` | Defines the Operator-Private patterns below |
 
@@ -48,7 +48,7 @@ Operators do not hand-edit Engine-Zone files.
 |------|-------|
 | `Example-Product-*/` | Worked-example product cartridges demonstrating the stranger-test flow |
 
-### Grows-Through-Use Zone — release-seeded, operator-appended *(Keel's fifth zone)*
+### Grows-Through-Use Zone — release-seeded, operator-appended *(Baseplate's fifth zone)*
 
 | Path | Notes |
 |------|-------|

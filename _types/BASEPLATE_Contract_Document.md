@@ -1,12 +1,12 @@
 ---
 Item_ID: "UUID-OR-SLUG"
-type: KEEL_Contract_Document
+type: BASEPLATE_Contract_Document
 title: "<Product> — <SOW | License & Attribution | WBS/Plan>"
-keel_Product_Slug: ""
-keel_Doc_Class: ""          # sow | license | wbs-plan
-keel_Layer: 6
-keel_Document_Status: drafting
-keel_Precedence_Rank:
+baseplate_Product_Slug: ""
+baseplate_Doc_Class: ""          # sow | license | wbs-plan
+baseplate_Layer: 6
+baseplate_Document_Status: drafting
+baseplate_Precedence_Rank:
 Date_Added:
 Date_Modified:
 Needs_Processing: false
@@ -26,8 +26,8 @@ AI_Instructions: ""
 ## Naming
 
 - **Filename:** `sow.md`, `license.md`, `plan.md` in `Artifacts/`.
-- **Type value:** `type: KEEL_Contract_Document`.
+- **Type value:** `type: BASEPLATE_Contract_Document`.
 
 ## Relationships
 
-- `KEEL_Selection_Record` — *earned-by (SOW/WBS are conditional; license is always)*.
+- `BASEPLATE_Selection_Record` — *earned-by (SOW/WBS are conditional; license is always)*.
