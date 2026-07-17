@@ -8,6 +8,13 @@ _USER.md
 */_design-state.md
 */_dependency-log.md
 
+# Shipped Examples carve-out (Convention 8): Example-Product-* cartridges are
+# release-owned reference implementations and ship IN FULL — re-include the
+# working files the operator-private patterns above would otherwise ignore.
+!Example-Product-*/Sessions/
+!Example-Product-*/_design-state.md
+!Example-Product-*/_dependency-log.md
+
 # Filesystem / workspace noise
 .DS_Store
 .obsidian/

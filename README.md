@@ -11,7 +11,7 @@ Needs_Processing: false
 # Baseplate
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Version](https://img.shields.io/badge/version-v0.1.1-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-v1.0.0--rc.1-blue.svg)](VERSION.md)
 
 Baseplate turns the seven-layer founding-document canon into an enforced discipline: point an AI at this folder, describe a product, and it interviews you, selects exactly the documents that product earns, generates them to a verifiable standard, and blocks the ship until a **stranger** — a fresh model instance handed only the folder — can build from it.
 
@@ -51,7 +51,7 @@ The four OVE content zones plus Baseplate's Grows-Through-Use Zone are declared 
 - Any capable AI that reads markdown and parses YAML frontmatter (Claude, GPT-4-class+, Gemini 2.x+).
 - **No runtime dependencies.** The OV form is plain markdown; a human and an AI run it with zero code execution.
 
-**Tooling posture.** The optional `_baseplate-engine/_meta/validate.py` (Python 3.7+ stdlib) is convenience automation, not a dependency — every check it runs has a manual equivalent in `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md`, and the two gates (consistency audit, stranger test) are runnable by a human with a text editor and a second chat window. Inherited from OVE's tooling-posture doctrine.
+**Tooling posture.** Baseplate ships **no validator by design** — the two gates (consistency audit, stranger test) are runnable by a human with a text editor and a second chat window, and the stranger test *cannot* be mechanized (it needs a fresh model instance). The manual walkthrough is `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md`. Inherited from OVE's manual-first, no-runtime-dependency doctrine.
 
 ## License
 
@@ -61,4 +61,4 @@ CC-BY 4.0. See [`LICENSE.md`](LICENSE.md).
 
 ## Version
 
-See [`VERSION.md`](VERSION.md). This is **v0.1.1** — first build; `CHANGELOG.md` is the authoritative release history.
+See [`VERSION.md`](VERSION.md). This is **v1.0.0-rc.1** — the release candidate (schema frozen; passes its own consistency audit). `CHANGELOG.md` is the authoritative release history. Promotion to v1.0.0 awaits a cross-family run + a real cartridge or two (see the changelog).

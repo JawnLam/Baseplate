@@ -10,7 +10,7 @@ Needs_Processing: false
 
 # Contributing to Baseplate
 
-Baseplate ships at v0.1.0. This document says what is in-scope without a major bump, what requires one, and the content-zone boundary that keeps `git pull` from clobbering your work.
+Baseplate ships at v1.0.0-rc.1. This document says what is in-scope without a major bump, what requires one, and the content-zone boundary that keeps `git pull` from clobbering your work.
 
 ## Content zones
 
@@ -34,6 +34,8 @@ Operators do not hand-edit Engine-Zone files.
 | `_USER.md` | Operator profile; never auto-inferred (P7) |
 | `<Product>/Sessions/*.md` | Per-cartridge session logs (verbatim working conversation) |
 | `<Product>/_design-state.md`, `<Product>/_dependency-log.md` | Operator's active per-product working state |
+
+These patterns apply to **your own** product cartridges. The release-owned `Example-Product-*/` cartridges are **not** operator-private — see the Shipped Examples Zone below; a `.gitignore` carve-out re-includes their working files so the worked example ships complete.
 | `.DS_Store`, `.obsidian/` | Filesystem/workspace noise |
 
 ### Operator-Extension Zone — operator-created; survives `git pull`
@@ -46,7 +48,7 @@ Operators do not hand-edit Engine-Zone files.
 
 | Path | Notes |
 |------|-------|
-| `Example-Product-*/` | Worked-example product cartridges demonstrating the stranger-test flow |
+| `Example-Product-*/` | Worked-example product cartridges demonstrating the stranger-test flow — these **ship in full** (their `Sessions/`, `_design-state.md`, and `_dependency-log.md` are re-included by a `.gitignore` carve-out, since they are release-owned reference implementations, not operator-private work) |
 
 ### Grows-Through-Use Zone — release-seeded, operator-appended *(Baseplate's fifth zone)*
 
