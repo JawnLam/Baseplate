@@ -22,14 +22,15 @@ Create `{ROOT}/<Product-Name>/` (Title-Case-Hyphenated), with:
 ```
 <Product-Name>/
 ├── _ov-manifest.md       # product identity (from the interview)
-├── _design-state.md      # cartridge phase + open threads
-├── _design-decisions.md  # locked decisions incl. every selection inclusion/exclusion (OFR-4)
-├── _schema-draft.md      # the stack's ID scheme + precedence declaration (S-3)
 ├── _product-interview.md # the PI-1..PI-12 record (OFR-1/2)
+├── _selection-record.md  # inclusions + exclusions with rationale (OFR-4) + ID scheme + precedence declaration (S-3)
 ├── _dependency-log.md    # dependency verifications (OFR-6)
 ├── Sessions/
-└── Artifacts/            # THE STACK — the only folder the stranger receives
+├── Artifacts/            # THE STACK — the only folder the stranger receives
+└── stranger-test-log.md  # the Gate 2 record (produced at ship; kept at cartridge level, outside Artifacts/)
 ```
+
+For a multi-session engagement, also add `_design-state.md` (cartridge phase + open threads); for a small single-session product it collapses into the manifest. The `_selection-record.md` (a `BASEPLATE_Selection_Record` Type) carries what OVE's cartridges split across `_design-decisions.md` + `_schema-draft.md` — the inclusions/exclusions *and* the ID scheme + precedence (S-3) — so those two files are not separate here.
 
 ## Step 2 — Interview (`02-ELICITATION.md`)
 

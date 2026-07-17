@@ -47,7 +47,7 @@ Needs_Processing: false
 
 ### Triage
 
-All nine fixed in the stack (see `_design-decisions.md` and the run-2 diff). Assessed for the portfolio catalog → **new entry PF-6 (under-specified behavioral semantics)** added, since the failures cluster on "the spec left a behavior implicit that changes results."
+All nine fixed in the stack (the run-2 edits to the `Artifacts/` documents and the `_selection-record.md`). Assessed for the portfolio catalog → **new entry PF-6 (under-specified behavioral semantics)** added, since the failures cluster on "the spec left a behavior implicit that changes results."
 
 ## Run 2 — 2026-07-16 — BLOCKED (deeper layer)
 
@@ -63,7 +63,7 @@ The run-1 fixes closed the resolution/scope/output gaps. Run 2 probed a **new, d
 
 ### Honest disposition
 
-**Blocked after two rounds.** This is the shakedown working exactly as `04-FOUNDRY-VERIFICATION.md` §2 predicts — the friction list is the engagement's real deliverable, and it is rich. The deeper finding: **a stack that commits to "lexical regex extraction is good enough" (LR-NFR-1, no Markdown parser) invites an unbounded tail of Markdown-edge-case questions.** The genuinely-clean fix is a product-design decision the operator must make — either (a) narrow the PRD scope so the unsupported Markdown forms are explicit non-goals, or (b) reverse the no-dependency call (LR-NFR-1) and adopt a real Markdown parser. That is exactly the kind of load-bearing decision a stranger test exists to force *before* code is written.
+**Blocked after two rounds.** This is the shakedown working exactly as intended — the friction list is the engagement's real deliverable, and it is rich. The deeper finding: **a stack that commits to "lexical regex extraction is good enough" (LR-NFR-1, no Markdown parser) invites an unbounded tail of Markdown-edge-case questions.** The genuinely-clean fix is a product-design decision the operator must make — either (a) narrow the PRD scope so the unsupported Markdown forms are explicit non-goals, or (b) reverse the no-dependency call (LR-NFR-1) and adopt a real Markdown parser. That is exactly the kind of load-bearing decision a stranger test exists to force *before* code is written.
 
 Reaching a clean pass is another 1–2 revision rounds (specify the regex-vs-real-Markdown behavior as non-goals or adopt a parser; define the counting/dedup semantics).
 

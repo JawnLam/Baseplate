@@ -41,7 +41,7 @@ Plus, if a cartridge is active: `<Product>/_ov-manifest.md`, `<Product>/_design-
 | `03-SELECTION.md` | selecting the document set (contains the class registry) |
 | `04-GENERATION-STANDARDS.md` | drafting any document |
 | `BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
-| `_templates/*` | generating a specific document |
+| `_types/*` + `03-SELECTION.md` registry | generating a specific document (the class registry's required-sections + the Type definition are the templates) |
 | `_meta/TRACEABILITY.md` | auditing Baseplate itself |
 
 "Skim" is not a valid mode for Tier 1.

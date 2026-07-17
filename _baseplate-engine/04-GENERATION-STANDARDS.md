@@ -26,12 +26,13 @@ scope: subject-agnostic
 7. **Anti-staleness.** Any fact imported from outside this product's interview — a date, a version number, a config value, an assumption carried from a previous product — is marked with its source and verification date at the point of use (e.g., `(verified 2026-07-16 against npm registry)`). Carryover without re-verification is a named failure mode.
 8. **Write for the stranger.** Zero conversation context. Define terms at first use or in a glossary in the stack. No "as we discussed," no "the usual setup," no reference to anything not in the `Artifacts/` folder.
 9. **Gates over prose polish.** When effort must be rationed, spend it on the verification layer (requirement IDs, the traceability map, the acceptance criteria), not on nicer wording. This is the Displacement-durable core; commodity prose is not.
+10. **Behavioral completeness — define every equivalence class (PF-6).** For every behavior that parses, matches, counts, deduplicates, or compares, ask: *would two competent builders resolve this the same way?* If not, the edge case is an implicit decision that must be made explicit in the document — the resolution order, the case-sensitivity rule, what's in vs out of scope, the counting/dedup equivalence, the exact output shape. A behavior stated as *what* but silent on *how it resolves the ambiguous case* passes the consistency audit (the doc is internally consistent) and fails the stranger test (as `stack-should-answer` questions). This is PF-6, and it was the entire reason the Linkrot shakedown took three stranger-test runs to converge. Front-run it here so the stranger test is a confirmation, not a discovery.
 
 ## Per-document sequence
 
 For each selected document, in dependency-layer order:
 
-1. Instantiate its structural Type's required sections (`03-SELECTION.md` registry; `_templates/`).
+1. Instantiate its structural Type's required sections — the source of truth is the `03-SELECTION.md` class registry ("Required sections" column) plus the Type definition in `_types/`. (There is no separate `_templates/` directory; the registry + Type files *are* the templates.)
 2. Fill numbered requirements / decisions / behaviors with stable IDs.
 3. Verify every named dependency as you write it; log each.
 4. Add the non-goals and the assumptions/open-questions sections.
