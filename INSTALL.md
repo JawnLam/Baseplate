@@ -13,14 +13,14 @@ Needs_Processing: false
 ## 1. Clone into a version-named folder
 
 ```bash
-git clone https://github.com/JawnLam/Baseplate.git ~/path/to/Baseplate-v0.1
-cd ~/path/to/Baseplate-v0.1
+git clone https://github.com/JawnLam/Baseplate.git ~/path/to/Baseplate-v1.0
+cd ~/path/to/Baseplate-v1.0
 # Disable push so you never accidentally upload your product cartridges
 git remote set-url --push origin DISABLED_TO_PREVENT_ACCIDENTAL_PUSH_OF_PERSONAL_WORK
 git remote -v   # fetch = real URL; push = DISABLED_...
 ```
 
-The folder is named `Baseplate-v<major>.<minor>`. On a major.minor release, rename it to match (`mv Baseplate-v0.1 Baseplate-v0.2`); `CHANGELOG.md` announces the transition.
+The folder is named `Baseplate-v<major>.<minor>`. On a major.minor release, rename it to match (`mv Baseplate-v1.0 Baseplate-v1.1`); `CHANGELOG.md` announces the transition.
 
 ## 2. Point an AI at it
 
@@ -48,4 +48,4 @@ Your product cartridges (Operator-Extension Zone), `_USER.md`/session logs (Oper
 
 ## Requirements
 
-Any capable AI (Claude / GPT-4-class+ / Gemini 2.x+). No runtime dependencies. The optional validator needs Python 3.7+ (stdlib only).
+Any capable AI (Claude / GPT-4-class+ / Gemini 2.x+). No runtime dependencies — Baseplate ships no validator by design; both gates run manually (`_baseplate-engine/_meta/VALIDATION-CHECKLIST.md`).

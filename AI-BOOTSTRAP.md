@@ -47,7 +47,7 @@ Plus, if a cartridge is active: its `_ov-manifest.md`, `_design-state.md`, and t
 | `03-SELECTION.md` | choosing the document set (includes the machine-readable class registry) |
 | `04-GENERATION-STANDARDS.md` | drafting any document |
 | `_baseplate-engine/BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
-| `_baseplate-engine/_templates/*` | generating a specific document |
+| `_types/*` + `03-SELECTION.md` registry | generating a specific document (the class registry's required-sections + the Type definition are the templates) |
 | `_meta/TRACEABILITY.md` | auditing Baseplate itself |
 
 ### 2. Environment checks

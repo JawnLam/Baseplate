@@ -14,7 +14,7 @@ REQ-A3:
   evidence: "No artificial lobotomy — Baseplate answers benign adjacent questions; scope discipline is at the level of the ship gate (stranger test), not benign-request refusal."
 REQ-B1:
   disposition: met
-  evidence: "Persistent user model — per-cartridge state files (_design-state, _decisions, _product-interview, _dependency-log) plus the cross-cartridge _portfolio/failure-catalog are the operator's system of record (06-state-persistence contract, Q11)."
+  evidence: "Persistent user model — per-cartridge state files (_ov-manifest, _design-state, _selection-record, _product-interview, _dependency-log) plus the cross-cartridge _portfolio/failure-catalog are the operator's system of record (06-state-persistence contract, Q11)."
 REQ-H4:
   disposition: met
   evidence: "Time-to-first-value — the first session produces a locked selection record and at least the unconditional L1+L4 documents; value lands in session one."
