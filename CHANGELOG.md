@@ -12,9 +12,9 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
-## [Unreleased]
+## [1.0.0-rc.2] — 2026-07-16
 
-Independent re-verification of the rc.1 self-audit found seven residual defects the rc.1 fixes missed; all closed:
+Independent re-verification of the rc.1 self-audit (a fresh model instance, not the author) found seven residual defects the rc.1 fixes missed; all closed. rc.2 is the first candidate that genuinely passes Baseplate's own Gate 1 consistency audit. (Promotion to v1.0.0 still awaits bucket 5 — a cross-family run + real cartridges.)
 
 - **Phantom validator survived in two places** rc.1 didn't touch: `INSTALL.md § Requirements` ("the optional validator needs Python 3.7+") and README's folder-structure row for `_meta/` ("validator"). Both now state the no-validator-by-design posture. `CONTRIBUTING.md`'s Engine-Zone row likewise still said "templates, meta, validator" — now points at the manual `VALIDATION-CHECKLIST.md`.
 - **`_templates/` reference survived in `AI-BOOTSTRAP.md`** (rc.1 fixed 00-START-HERE and 04-GENERATION-STANDARDS only). Since 00-START-HERE declares AI-BOOTSTRAP a mirror whose divergence is itself a defect, the row now matches: `_types/*` + the `03-SELECTION.md` registry are the templates.
