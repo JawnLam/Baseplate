@@ -11,7 +11,7 @@ Needs_Processing: false
 # Baseplate
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-v0.1.1-blue.svg)](VERSION.md)
 
 Baseplate turns the seven-layer founding-document canon into an enforced discipline: point an AI at this folder, describe a product, and it interviews you, selects exactly the documents that product earns, generates them to a verifiable standard, and blocks the ship until a **stranger** — a fresh model instance handed only the folder — can build from it.
 
@@ -61,4 +61,4 @@ CC-BY 4.0. See [`LICENSE.md`](LICENSE.md).
 
 ## Version
 
-See [`VERSION.md`](VERSION.md). This is **v0.1.0** — first build; `CHANGELOG.md` is the authoritative release history.
+See [`VERSION.md`](VERSION.md). This is **v0.1.1** — first build; `CHANGELOG.md` is the authoritative release history.

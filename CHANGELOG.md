@@ -12,6 +12,16 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
+## [0.1.1] — 2026-07-16
+
+Patch — canon coverage. Extended `_baseplate-engine/01-THE-CANON.md` and the `03-SELECTION.md` class registry to close gaps against the source taxonomy this OV was built from:
+
+- **New document classes on the menu + registry:** MRD (L0, largely-absorbed-into-PRD), ERD (L3, beside the data dictionary), SLI (L5, beside SLO), and a deployment/rollback + migration class (L5). All map to existing structural Types (`BASEPLATE_Narrative_Document` / `_Design_Document` / `_Operations_Document`) — no new Types, no schema change.
+- **Lineage name-drops** added inline: Amazon "Working Backwards" (PR/FAQ), Joel Spolsky (functional spec), STRIDE (threat model), Kruchten's 4+1, the Google-design-doc / IETF→Rust→React RFC lineage. The standards grounding (ISO/IEC/IEEE 29148, IEEE 1016, 12207/15288, V-model, Zachman, Nygard, ICD/CDRL) is retained.
+- **Rationale expanded:** the canon's §1 now states the multi-audience reason a stack can't collapse into one file (no single artifact serves product/engineering/QA/operations at once) *alongside* the change-rate reason, and notes the SRS is the closest single document to a zero-questions handoff.
+
+No behavioral change to the engine, gates, or generated stacks.
+
 ## [0.1.0] — 2026-07-16
 
 First build. Designed inside Operating-Volume-Engineering v2.6 and passed through its gauntlet.

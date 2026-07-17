@@ -31,6 +31,7 @@ Each row: canon class → layer, earning condition (the product-shape signal), s
 |---|---|---|---|---|
 | product-brief / one-pager | 0 | Standalone iff anyone but the operator must be convinced (PI-3, PI-5); else a section of the L1 doc | `BASEPLATE_Narrative_Document` | Problem; Audience; Why-now; Success definition |
 | BRD | 0 | Enterprise/consulting context with business objectives to align (PI-3, PI-5, PI-12) | `BASEPLATE_Narrative_Document` | Business objectives; Stakeholders; Constraints; Success metrics |
+| MRD | 0 | Market need + competitive landscape must be argued explicitly (PI-5) — usually absorbed into the PRD; standalone only when the market case is contested | `BASEPLATE_Narrative_Document` | Market need; Competitive landscape; Positioning |
 | PR/FAQ | 0 | Market-facing product needing a crisp external framing (PI-5) | `BASEPLATE_Narrative_Document` | Press release; Anticipated FAQs |
 | PRD | 1 | **Unconditional** (requirements-bearing) | `BASEPLATE_Requirements_Document` | Numbered requirements; Non-goals; Success metrics; Assumptions/Open-questions; Verification map ref |
 | functional spec | 1 | Observable behavior is nontrivial: states, errors, edge cases (PI-1, PI-4) | `BASEPLATE_Requirements_Document` | Numbered behaviors; Inputs/Outputs; Error/edge cases; Non-goals |
@@ -41,14 +42,15 @@ Each row: canon class → layer, earning condition (the product-shape signal), s
 | threat model | 2 | Meaningful attack surface (PI-4 external interface + PI-6 sensitive data) | `BASEPLATE_Design_Document` | Assets; Trust boundaries; Threats; Mitigations |
 | technical design / RFC | 3 | Any component whose build is nontrivial; **most precision when builder = agent** (PI-2) | `BASEPLATE_Design_Document` | Data models; Algorithms; Failure modes; Alternatives rejected |
 | interface contract | 3 | Mandatory the moment two components or two builders meet (PI-7, PI-2) | `BASEPLATE_Design_Document` | Endpoints/messages; Schemas; Versioning; Error contract |
-| data dictionary | 3 | Persistent or shared data model (PI-6, PI-7) | `BASEPLATE_Design_Document` | Entities; Fields; Types; Constraints |
+| data dictionary + ERD | 3 | Persistent or shared data model (PI-6, PI-7) | `BASEPLATE_Design_Document` | Entities; Relationships (ERD); Fields; Types; Constraints; units/provenance |
 | UX design spec | 3 | Iff a human interface exists (PI-4) | `BASEPLATE_Design_Document` | Flows; States; Components; Accessibility |
 | test plan | 4 | Include with L1 (verification) | `BASEPLATE_Verification_Document` | Test strategy; Coverage; Environments |
 | acceptance test plan | 4 | **Unconditional** (definition of done) | `BASEPLATE_Verification_Document` | Acceptance criteria; Pass/fail; Sign-off |
 | traceability matrix | 4 | **Unconditional per D-7** — the requirement↔verification map | `BASEPLATE_Verification_Document` | Requirement→design→verification rows; orphan check |
 | stranger test | 4 | Agent-built products (PI-2) — and always as the ship gate | `BASEPLATE_Stranger_Test_Log` | Criteria table; question classification; rerun log |
 | runbook | 5 | Product runs continuously or on a schedule (PI-8) | `BASEPLATE_Operations_Document` | Setup; Credentials; Cadence; Failure modes & responses; Monitoring |
-| SLO definitions | 5 | Availability matters (PI-8) | `BASEPLATE_Operations_Document` | Objectives; Indicators; Error budget |
+| SLO / SLI definitions | 5 | Availability matters (PI-8) | `BASEPLATE_Operations_Document` | Objectives (SLO); Indicators (SLI); Error budget |
+| deployment / rollback + migration | 5 | Product is deployed/updated in place, or has data/schema migrations (PI-8, PI-9) | `BASEPLATE_Operations_Document` | Deploy steps; Rollback plan; Migration procedures |
 | SOW | 6 | Money or formal obligation crosses a boundary (PI-12) | `BASEPLATE_Contract_Document` | Deliverables; Milestones; Acceptance; Payment |
 | license & attribution | 6 | **Always** | `BASEPLATE_Contract_Document` | License; Attribution block |
 | WBS / plan | 6 | Multiple workstreams must interleave (PI-10) | `BASEPLATE_Contract_Document` | Workstreams; Dependencies; Sequence |
