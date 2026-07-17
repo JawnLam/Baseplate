@@ -26,7 +26,6 @@ scope: subject-agnostic
 | OFR-5 precedence declared | `BASEPLATE_Selection_Record` (extractable field, S-3) | consistency audit (precedence present) | — |
 | OFR-6 generation standards; dependency verified | `04-GENERATION-STANDARDS.md`; `_dependency-log.md` | consistency audit (dependency log complete) | PF-1 (fabrication); PF-3 (orphans) |
 | OFR-7 write for the stranger | `04-GENERATION-STANDARDS.md` std 8 | stranger test (ST-1/ST-3) | PF-5 |
-| OFR-6 behavioral completeness — define every parsing/counting equivalence class | `04-GENERATION-STANDARDS.md` std 10 | consistency audit; stranger test (ST-3) | PF-6 (under-specified semantics) |
 | OFR-8 sequence (F8) | `00-START-HERE.md`; `BOOTSTRAP-NEW-STACK.md` | golden session (E-2 lock order) | — |
 | OFR-9 consistency audit | `05-GATES.md` Gate 1 | run per cartridge | PF-1/3/5 |
 | OFR-10 stranger test = ship gate | `05-GATES.md` Gate 2 | run per cartridge; `BASEPLATE_Stranger_Test_Log` | — |
@@ -34,6 +33,7 @@ scope: subject-agnostic
 | OFR-12 portfolio failure catalog | `_portfolio/failure-catalog.md` (Grows-Through-Use Zone, D-5) | E-5 (seeded); loaded at session start | all PF |
 | OFR-13 persist per-cartridge state (P2) | backbone state files; Q11 contract | close-out state write | PF-2 |
 | OFR-14 revision mode | `05-GATES.md § Revision` | shakedown revision pass | — |
+| OFR-15 behavioral completeness — define every parsing/counting equivalence class | `04-GENERATION-STANDARDS.md` std 10 | consistency audit; stranger test (ST-3) | PF-6 (under-specified semantics) |
 | ONF-1 markdown-only, manual gates | whole engine; `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md` (manual gate walkthrough) | `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md` | — |
 | ONF-2 context-budget / tiered reads | `00-START-HERE.md` tiers | read-tier compliance (golden session U-b) | — |
 | ONF-3 Baseplate traces in its own matrix | this file | audit walks this matrix | orphan requirement/check |

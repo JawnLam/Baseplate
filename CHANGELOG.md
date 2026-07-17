@@ -12,6 +12,19 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+Independent re-verification of the rc.1 self-audit found seven residual defects the rc.1 fixes missed; all closed:
+
+- **Phantom validator survived in two places** rc.1 didn't touch: `INSTALL.md § Requirements` ("the optional validator needs Python 3.7+") and README's folder-structure row for `_meta/` ("validator"). Both now state the no-validator-by-design posture. `CONTRIBUTING.md`'s Engine-Zone row likewise still said "templates, meta, validator" — now points at the manual `VALIDATION-CHECKLIST.md`.
+- **`_templates/` reference survived in `AI-BOOTSTRAP.md`** (rc.1 fixed 00-START-HERE and 04-GENERATION-STANDARDS only). Since 00-START-HERE declares AI-BOOTSTRAP a mirror whose divergence is itself a defect, the row now matches: `_types/*` + the `03-SELECTION.md` registry are the templates.
+- **Duplicate requirement ID in `_meta/TRACEABILITY.md`:** the new behavioral-completeness row was labeled OFR-6, which already names dependency verification — violating generation standard 1 (stable, unique IDs) in the engine's own matrix. Renumbered **OFR-15** and moved after OFR-14.
+- **Broken table in `CONTRIBUTING.md`:** the Operator-Private-Zone clarification paragraph was inserted mid-table, orphaning the `.DS_Store` row. Row restored to the table; paragraph moved below it.
+- **Orphaned waiver destination:** `05-GATES.md` Gate 1 sent audit waivers to `_decisions.md`, a file the rc.1 backbone reconciliation removed. Waivers now go to the cartridge state (`_design-state.md`, or `_ov-manifest.md` for single-session cartridges). `_meta/posture.yaml`'s REQ-B1 evidence updated to the same backbone file names.
+- **Stale version examples in `INSTALL.md`** (`Baseplate-v0.1` clone/rename examples) updated to the v1.x era.
+
+Verified clean after the fixes: no `validate.py`/`validator`/`_templates/` references outside the changelog, no references to backbone files that don't ship, unique requirement IDs in the traceability matrix, PF-1..PF-6 all traced, gitignore carve-out confirmed by probe (`git check-ignore`: example-cartridge files re-included, operator-cartridge files ignored).
+
 ## [1.0.0-rc.1] — 2026-07-16
 
 Release candidate. Baseplate now **passes its own Gate 1 consistency audit** and declares its schema frozen. This closes buckets 1–4 of the v1.0 graduation; promotion to **v1.0.0** awaits the maturity evidence (bucket 5): a cross-family golden + stranger run (all runs so far were Claude-only) and one to three real product cartridges run end-to-end (converting the REQ-M1 flywheel from committed-but-empty to demonstrated, and exercising REVISE-STACK).

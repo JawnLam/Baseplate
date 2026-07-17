@@ -41,7 +41,7 @@ The AI will start by interviewing you, one question at a time. It will *not* sta
 | `_baseplate-engine/` | The canon + protocols: `00-START-HERE`, `01-THE-CANON`, `02-ELICITATION`, `03-SELECTION`, `04-GENERATION-STANDARDS`, `05-GATES`, `BOOTSTRAP-NEW-STACK` |
 | `_types/` | The eight structural document Types |
 | `_portfolio/` | The cross-cartridge failure catalog (Grows-Through-Use Zone) |
-| `_meta/` | Posture, traceability matrix, golden-session log, validator |
+| `_meta/` | Posture, traceability matrix, golden-session log |
 | `<Product-Name>/` | Your product cartridges |
 
 The four OVE content zones plus Baseplate's Grows-Through-Use Zone are declared in [`CONTRIBUTING.md`](CONTRIBUTING.md) § Content zones.

@@ -21,7 +21,7 @@ Baseplate declares the four OVE-canonical content zones plus a **fifth zone** fo
 | Path pattern | Notes |
 |--------------|-------|
 | `README.md`, `AI-BOOTSTRAP.md`, `INSTALL.md`, `OPERATOR-GUIDE.md`, `CONTRIBUTING.md`, `LICENSE.md`, `VERSION.md`, `CHANGELOG.md`, `UPDATE-PROMPT.md` | Front-door docs |
-| `_baseplate-engine/**` | Engine prose (the canon, elicitation, selection, generation standards, gates), templates, meta, validator |
+| `_baseplate-engine/**` | Engine prose (the canon, elicitation, selection, generation standards, gates) + `_meta/` (the manual `VALIDATION-CHECKLIST.md`) |
 | `_types/**` | The eight structural Type definitions (Convention 6) |
 | `.gitignore` | Defines the Operator-Private patterns below |
 
@@ -34,9 +34,9 @@ Operators do not hand-edit Engine-Zone files.
 | `_USER.md` | Operator profile; never auto-inferred (P7) |
 | `<Product>/Sessions/*.md` | Per-cartridge session logs (verbatim working conversation) |
 | `<Product>/_design-state.md`, `<Product>/_dependency-log.md` | Operator's active per-product working state |
+| `.DS_Store`, `.obsidian/` | Filesystem/workspace noise |
 
 These patterns apply to **your own** product cartridges. The release-owned `Example-Product-*/` cartridges are **not** operator-private — see the Shipped Examples Zone below; a `.gitignore` carve-out re-includes their working files so the worked example ships complete.
-| `.DS_Store`, `.obsidian/` | Filesystem/workspace noise |
 
 ### Operator-Extension Zone — operator-created; survives `git pull`
 

@@ -27,7 +27,7 @@ Mechanical checklist over the frozen `Artifacts/` folder. Every item is a hard c
 - [ ] **Anti-staleness marks present.** Every imported fact carries its source + verification date.
 - [ ] **Non-goals present** in every requirements-bearing document.
 
-Any unchecked box: fix, or operator-waive with a written reason in `_decisions.md`. Then re-run. Advance each document to `baseplate_document_status: audited`.
+Any unchecked box: fix, or operator-waive with a written reason recorded in the cartridge state (`_design-state.md`, or `_ov-manifest.md` for a single-session cartridge). Then re-run. Advance each document to `baseplate_document_status: audited`.
 
 ## Gate 2 — The Stranger Test (the ship gate — the heart)
 
