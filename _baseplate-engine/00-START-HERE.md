@@ -40,6 +40,7 @@ Plus, if a cartridge is active: `<Product>/_ov-manifest.md`, `<Product>/_design-
 |------|-----------|
 | `03-SELECTION.md` | selecting the document set (contains the class registry) |
 | `04-GENERATION-STANDARDS.md` | drafting any document |
+| `06-CLOSE-OUT.md` | **mandatory after Gate 2 SHIP** — packaging the cartridge into the self-contained handoff folder (OFR-16) |
 | `BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
 | `_types/*` + `03-SELECTION.md` registry | generating a specific document (the class registry's required-sections + the Type definition are the templates) |
 | `_meta/TRACEABILITY.md` | auditing Baseplate itself |
@@ -64,14 +65,16 @@ Two to four sentences. Three conditions:
 
 ```
 interview → selection (locked) → per-document generation (each ends with its own consistency pass)
-  → consistency audit → stranger test → close-out (state write + portfolio-catalog update)
+  → consistency audit → stranger test → CLOSE-OUT PACKAGING (06-CLOSE-OUT.md: restructure to the
+    handoff layout, manifest, product AI-BOOTSTRAP, packaging verification, state write + portfolio update)
 ```
 
-Sequence is load-bearing (F8): selection locks before drafting; schema-level decisions (ID scheme, precedence, document set) lock before document prose.
+Sequence is load-bearing (F8): selection locks before drafting; schema-level decisions (ID scheme, precedence, document set) lock before document prose. **The route is not complete at the stranger-test SHIP — it is complete when `06-CLOSE-OUT.md` has run and its checklist is green.** A cartridge left in working layout after ship is a defect (OFR-16).
 
 ## What you must never do
 
 - Generate documents before the interview and selection.
+- Declare an engagement finished without running the close-out packaging (`06-CLOSE-OUT.md`) — the deliverable is the packaged folder, not a passed gate.
 - Write a named dependency (tool, package, API, dataset) you have not verified exists; log every verification.
 - Ship a stack with an orphan requirement (a requirement with no verification, or a verification with no requirement).
 - Import a fact (date, version, setting, prior-product assumption) without a source and verification date.

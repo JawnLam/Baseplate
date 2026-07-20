@@ -12,6 +12,25 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
+## [1.1.0] — 2026-07-20
+
+**Close-out packaging protocol (OFR-16).** Operator-directed engine addition from the third cartridge (Gridlock, the first game): a stack that passes Gate 2 is no longer a finished engagement — it must be **packaged into a self-contained handoff folder** a fresh AI can build from on the strength of one sentence ("read everything in this folder and build it for me"). Schema untouched (FROZEN v1.0); minor bump — additive chapter plus strengthened route definition.
+
+### Added
+
+- **`_baseplate-engine/06-CLOSE-OUT.md`** — the packaging protocol: restructure to the final layout (top level = product `AI-BOOTSTRAP.md` + `Construction/` [the former `Artifacts/`] + `Records/` [non-essential history, immutable] + `Build/` [seeded builder workspace]); `Construction/MANIFEST.md` with per-file SHA-256s + gate verdicts (verify-before-build); a product bootstrap with nine required sections including the **operator-input register** (`item | why | when-to-ask trigger` — the complete list of everything the builder may ever need from the operator); seeded `Build/build-state.md` (state lives in files, exported to the build phase) and `Build/deviations.md` (the standing reconciliation rule feeding REVISE-STACK); packaging verification = mechanical check + **fresh-instance orientation probe**; REVISE-STACK-on-a-packaged-cartridge rules (edit `Construction/` in place, regenerate manifest, append-only `Records/`).
+- **OFR-16** traced in `_meta/TRACEABILITY.md`.
+- **PF-8 — Unparameterized acceptance metric** (from the Gridlock Gate-2 evaluator): a success metric referencing a threshold no schema names as an extractable value; survives both gates by construction, so prevention is generation-time (every comparative phrase must resolve to a named field). Cataloged in `_portfolio/failure-catalog.md`, traced in `_meta/TRACEABILITY.md`.
+
+### Changed
+
+- **`00-START-HERE.md`** — session shape now ends at close-out packaging, not the stranger test; Tier-2 table gains the 06 row; never-do list gains "declare an engagement finished without running the close-out packaging."
+- **`05-GATES.md § Close-out`** — split into per-session state write vs per-cartridge packaging; the latter routes to 06.
+- **`BOOTSTRAP-NEW-STACK.md` Step 6** — rewritten as "Close-out packaging (mandatory)"; the quality-gate checklist is now titled "before the engagement is called done" and gains the packaging box.
+- **`AI-BOOTSTRAP.md`** (root mirror) — Tier-2 table gains the 06 row.
+- **`_baseplate-engine/_meta/VALIDATION-CHECKLIST.md`** — gains the close-out packaging section; Overall gains the packaging box.
+- Version strings synchronized (VERSION, README, CONTRIBUTING, INSTALL folder-name example).
+
 ## [1.0.0] — 2026-07-19
 
 **Baseplate 1.0.0.** Promoted from rc.2 on the strength of the maturity evidence below (bucket 5). No engine, schema, or Type change from rc.2 — 1.0.0 is rc.2 plus the demonstrated maturity evidence. Two bucket-5 confirmations are deferred to a **1.0.1 roadmap** (they refine, they do not gate): the cross-family *stranger* test (the cross-family *golden* already passed) and a standalone REVISE-STACK demonstration (deferred deliberately rather than corrupt the faithful real cartridge).

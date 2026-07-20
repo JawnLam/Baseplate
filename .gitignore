@@ -15,6 +15,12 @@ _USER.md
 !Example-Product-*/_design-state.md
 !Example-Product-*/_dependency-log.md
 
+# Gridlock (packaged 2026-07-20 per _baseplate-engine/06-CLOSE-OUT.md): the
+# close-out layout nests working-state files under Gridlock/Records/, which the
+# single-level Operator-Private patterns above do not match — the packaged
+# cartridge ships fully tracked. (The pre-packaging carve-out lines for
+# Gridlock/Sessions/ etc. are no longer needed and were removed.)
+
 # Filesystem / workspace noise
 .DS_Store
 .obsidian/

@@ -48,11 +48,11 @@ Draft each selected document from its structural Type and required sections, in 
 
 Run the consistency audit, then the stranger test with a fresh instance. Any `stack-should-answer` question blocks ship — fix and rerun. Log the stranger test in a `BASEPLATE_Stranger_Test_Log`.
 
-## Step 6 — Close-out
+## Step 6 — Close-out packaging (mandatory — the engagement is not done without it)
 
-State write; append any new failure mode to `_portfolio/failure-catalog.md`; mark the stack `shipped`.
+Mark the stack `shipped`, then run **`06-CLOSE-OUT.md` (OFR-16)** in full: restructure the cartridge to the handoff layout (top level = product `AI-BOOTSTRAP.md` + `Construction/` + `Records/` + `Build/`), write `Construction/MANIFEST.md`, write the product bootstrap (TOC, operator-input register with when-to-ask triggers, definition of done, deviations rule, provenance), seed the build workspace, run the packaging verification (mechanical + fresh-instance orientation probe), final state write, and append any new failure mode to `_portfolio/failure-catalog.md` (traced in `_meta/TRACEABILITY.md` in the same change). The deliverable of this route is the **packaged folder**, not a passed stranger test.
 
-## Quality gates before the stack ships
+## Quality gates before the engagement is called done
 
 - [ ] Interview PI-1..PI-12 captured (one at a time)
 - [ ] Selection locked with inclusions AND exclusions recorded
@@ -60,7 +60,8 @@ State write; append any new failure mode to `_portfolio/failure-catalog.md`; mar
 - [ ] Consistency audit clean (or every finding waived in writing)
 - [ ] Stranger test passed (no `stack-should-answer` questions) with a fresh instance
 - [ ] Dependency log complete; anti-staleness marks present
-- [ ] Portfolio catalog updated at close
+- [ ] **Close-out packaging complete — the full `06-CLOSE-OUT.md` checklist is green** (final layout, manifest, product bootstrap with operator-input register, seeded `Build/`, packaging verification incl. orientation probe)
+- [ ] Portfolio catalog updated at close (new PF entries traced in `_meta/TRACEABILITY.md`)
 
 ## Failure modes to avoid (load the full catalog at session start)
 
