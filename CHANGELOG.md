@@ -12,6 +12,23 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
+## [1.2.0] — 2026-07-20
+
+**Item_ID UUID mandate.** Operator-directed generation-standard change: every generated document's `Item_ID` must now be an uppercase 8-4-4-4-12 UUID matching the target vault's `Master_Schema` — slugs are retired from shipped artifacts. Schema untouched (FROZEN v1.0 — this is a generation-standard + template-placeholder change, not a Type or required-section change); minor bump per SemVer.
+
+### Added
+
+- **Generation standard 11** (`04-GENERATION-STANDARDS.md`) — mandates the uppercase 8-4-4-4-12 UUID `Item_ID` format; slugs not permitted; a fresh UUID per document.
+
+### Changed
+
+- **All 8 structural Type templates** (`_types/`) — `Item_ID` placeholder changed from `"UUID-OR-SLUG"` to `"<UUID>"` to enforce the mandate at instantiation. Frontmatter-field placeholder only; no required-section change, so schema semantics are unchanged.
+- **Both example cartridges** (`Example-Product-Linkrot`, `Example-Product-Datestamper`) — re-stamped from slug `Item_ID`s to fresh UUIDs for conformance.
+
+### Migration
+
+- Any stack generated before v1.2.0 with slug `Item_ID`s should be re-stamped to uppercase UUIDs to conform to the vault `Master_Schema`. In-stack cross-references use requirement IDs and filenames (not `Item_ID`), so re-stamping is non-breaking.
+
 ## [1.1.0] — 2026-07-20
 
 **Close-out packaging protocol (OFR-16).** Operator-directed engine addition from the third cartridge (Gridlock, the first game): a stack that passes Gate 2 is no longer a finished engagement — it must be **packaged into a self-contained handoff folder** a fresh AI can build from on the strength of one sentence ("read everything in this folder and build it for me"). Schema untouched (FROZEN v1.0); minor bump — additive chapter plus strengthened route definition.

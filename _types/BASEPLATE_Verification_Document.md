@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Verification_Document
 title: "<Product> — <Test Plan | Acceptance Test Plan | Traceability Matrix>"
 baseplate_Product_Slug: ""

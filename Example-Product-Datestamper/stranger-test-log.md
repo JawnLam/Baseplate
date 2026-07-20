@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Stranger_Test_Log
-Item_ID: datestamper-stranger-test-log
+Item_ID: D666D479-E93E-423D-AB62-D53C7DCB4274
 title: "Inbox-Datestamper — Stranger Test Log"
 baseplate_Product_Slug: "DS"
 baseplate_Stranger_Model: "Fresh Claude instance (isolated subagent, no drafting context)"

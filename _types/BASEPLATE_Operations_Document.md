@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Operations_Document
 title: "<Product> — <Runbook | SLO Definitions>"
 baseplate_Product_Slug: ""

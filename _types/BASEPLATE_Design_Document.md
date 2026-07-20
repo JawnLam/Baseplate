@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Design_Document
 title: "<Product> — <Architecture | ADR | Tech Design | Interface Contract | Data Dictionary | UX Spec | Threat Model>"
 baseplate_Product_Slug: ""

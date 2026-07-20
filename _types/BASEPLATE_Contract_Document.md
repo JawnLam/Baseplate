@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Contract_Document
 title: "<Product> — <SOW | License & Attribution | WBS/Plan>"
 baseplate_Product_Slug: ""

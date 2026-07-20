@@ -1,7 +1,7 @@
 ---
 type: Fleeting
 timestamp: "2026-07-16T00:00:00Z"
-Item_ID: linkrot-dependency-log
+Item_ID: 188176B1-1FB8-4AA0-8D71-00574E6B1A83
 title: "Linkrot — Dependency Verification Log"
 Date_Added: 2026-07-16
 Date_Modified: 2026-07-16

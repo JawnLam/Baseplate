@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Design_Document
-Item_ID: datestamper-adr-001
+Item_ID: 8BF7C252-C436-4165-BC4B-2DAB9093F01E
 title: "Inbox-Datestamper — ADR-001: Birth time vs mtime for the stamp"
 baseplate_Product_Slug: "DS"
 baseplate_Doc_Class: adr

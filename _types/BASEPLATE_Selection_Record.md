@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Selection_Record
 title: "<Product> — Selection Record"
 baseplate_Product_Slug: ""

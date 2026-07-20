@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Design_Document
-Item_ID: linkrot-technical-design
+Item_ID: C6330152-80C5-45E0-B96B-936DA79C7412
 title: "Linkrot — Technical Design & CLI Interface Contract"
 baseplate_Product_Slug: "LR"
 baseplate_Doc_Class: tech-design

@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Stranger_Test_Log
 title: "<Product> — Stranger Test Log"
 baseplate_Product_Slug: ""

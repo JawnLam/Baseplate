@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Design_Document
-Item_ID: datestamper-adr-002
+Item_ID: C5D14352-6860-4A0D-8085-4C0B6DBDF66C
 title: "Inbox-Datestamper — ADR-002: Baseline / new-files-only vs backfill"
 baseplate_Product_Slug: "DS"
 baseplate_Doc_Class: adr

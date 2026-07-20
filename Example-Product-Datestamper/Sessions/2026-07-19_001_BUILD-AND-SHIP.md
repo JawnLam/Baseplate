@@ -1,7 +1,7 @@
 ---
 type: Fleeting
 timestamp: "2026-07-19T00:00:00Z"
-Item_ID: datestamper-session-001
+Item_ID: 8B271BD8-3322-4266-886B-1E1F18218CF3
 title: "Inbox-Datestamper — Session 001 (build & ship)"
 Date_Added: 2026-07-19
 Date_Modified: 2026-07-19

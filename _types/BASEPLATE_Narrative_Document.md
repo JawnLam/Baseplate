@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Narrative_Document
 title: "<Product> — <Brief | BRD | PR-FAQ | Product Interview>"
 baseplate_Product_Slug: ""
