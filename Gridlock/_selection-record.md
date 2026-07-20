@@ -4,7 +4,7 @@ Item_ID: gridlock-selection-record
 title: "Gridlock — Selection Record"
 baseplate_Product_Slug: "GL"
 baseplate_ID_Scheme: "GL-FR-<n> / GL-NFR-<n> / GL-RS-<n> / GL-ADR-<n>"
-baseplate_Precedence_Declaration: "prd > game-rules-spec > architecture > adr-001 > adr-002 > adr-003 > technical-design > interface-contracts > data-dictionary > ux-spec > runbook > acceptance-test-plan"
+baseplate_Precedence_Declaration: "prd > game-rules-spec > architecture > adr-001 > adr-002 > adr-003 > adr-004 > adr-005 > technical-design > interface-contracts > data-dictionary > ux-spec > runbook > acceptance-test-plan"
 Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
 Needs_Processing: false
@@ -30,6 +30,8 @@ Needs_Processing: false
 | ADR-002 turn structure (L2) | **Include** | PI-11(b) simultaneous-reveal vs alternating-with-reactions | BASEPLATE_Design_Document |
 | ADR-003 Netrunner-mapping literalness (L2) | **Include** | PI-11(c) how literally drives/ice/runs translate | BASEPLATE_Design_Document |
 | further ADRs | **Standing rule:** any two-way decision surfaced in generation becomes an ADR draft with a recommendation for operator sign-off | PI-11 operator delegation; PF-5 guard | BASEPLATE_Design_Document |
+| ADR-004 role structure (L2) | **Include** *(added 2026-07-20 under the standing rule; operator decided: alternating possessions)* | PI-1 football framing vs Netrunner fixed roles — surfaced during PRD drafting | BASEPLATE_Design_Document |
+| ADR-005 ready-made playbooks (L2) | **Include** *(added 2026-07-20 under the standing rule; operator decided: ready-made only for prototype)* | PI-5/PI-9 prototype-focus priority — surfaced during PRD drafting | BASEPLATE_Design_Document |
 | threat model (L2) | **Exclude — with named revisit trigger** (deferred-scope register: arrives with real accounts) | PI-6 no accounts, no PII, nothing stored identifies a human | — |
 | technical design (L3) | **Include** — engine internals: game-state machine, deterministic resolution pipeline, replay format, RNG policy (per ADR-001 outcome), AI-opponent interface, sim-harness contract. Maximum precision: frozen behavioral semantics per PF-6 | PI-2 agent builder (max L3); PI-6 deterministic replay-driven engine; PI-7 | BASEPLATE_Design_Document |
 | interface contracts (L3) | **Include** as its own document — client↔server protocol (versioned, frozen) + the balance-data file schemas (the fluid zone's fixed container). "Schema is law; code conforms." | PI-2 + PI-7 two components/builders meet → mandatory; PI-4(d) internal versioned contract; PI-9 freeze line | BASEPLATE_Design_Document |
@@ -54,14 +56,16 @@ Needs_Processing: false
 4. `adr-001-resolution-randomness.md` (L2)
 5. `adr-002-turn-structure.md` (L2)
 6. `adr-003-netrunner-mapping.md` (L2)
-7. `technical-design.md` (L3)
-8. `interface-contracts.md` (L3)
-9. `data-dictionary.md` (L3)
-10. `ux-spec.md` (L3)
-11. `acceptance-test-plan.md` (L4)
-12. `traceability-matrix.md` (L4)
-13. `runbook.md` (L5)
-14. `license.md` (L6)
+7. `adr-004-role-structure.md` (L2) *(added 2026-07-20, standing rule)*
+8. `adr-005-ready-made-playbooks.md` (L2) *(added 2026-07-20, standing rule)*
+9. `technical-design.md` (L3)
+10. `interface-contracts.md` (L3)
+11. `data-dictionary.md` (L3)
+12. `ux-spec.md` (L3)
+13. `acceptance-test-plan.md` (L4)
+14. `traceability-matrix.md` (L4)
+15. `runbook.md` (L5)
+16. `license.md` (L6)
 
 ## ID scheme
 
@@ -71,7 +75,7 @@ Needs_Processing: false
 
 1. `prd` — wins on **scope** (what is in/out of the prototype) and the non-goals.
 2. `game-rules-spec` — **law for gameplay semantics** (what happens on the field); ADR outcomes are incorporated here once decided.
-3. `architecture` > `adr-001` > `adr-002` > `adr-003` — structure and decision records.
+3. `architecture` > `adr-001` > `adr-002` > `adr-003` > `adr-004` > `adr-005` — structure and decision records.
 4. `technical-design` — wins on engine internals (state machine, determinism, replay, RNG policy).
 5. `interface-contracts` — **law for wire formats and data-file schemas**; schema is law, code conforms.
 6. `data-dictionary` > `ux-spec`.

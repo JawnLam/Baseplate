@@ -7,7 +7,7 @@ Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
 Needs_Processing: false
 doc_type: baseplate-cartridge-design-state
-baseplate_Cartridge_Phase: "selection-locked"
+baseplate_Cartridge_Phase: "generation-in-progress"
 ---
 
 # Gridlock — Design State
@@ -16,15 +16,15 @@ baseplate_Cartridge_Phase: "selection-locked"
 
 ## Current phase
 
-**`selection-locked`** (as of 2026-07-20, session 01). Interview PI-1..PI-12 captured and operator-confirmed; selection record locked with 14-document stack, `GL-` ID scheme, and precedence declaration. **Next step: generation (Step 4 of BOOTSTRAP-NEW-STACK), in dependency-layer order, starting with `Artifacts/prd.md`.** Load `04-GENERATION-STANDARDS.md` + the relevant `_types/*` before drafting each document.
+**`generation-in-progress`** (as of 2026-07-20, session 02). Generated and internally-consistent so far: `Artifacts/prd.md` (GL-FR-1..14, GL-NFR-1..8, verification IDs GL-AT-1..22 reserved), plus five ADRs — **all five decided by the operator 2026-07-20**: ADR-001 bounded variance, ADR-002 simultaneous reveal, ADR-003 football-first + borrowed economy (borrowing boundary enumerated), ADR-004 alternating possessions, ADR-005 ready-made playbooks (4 archetypes: ground-and-pound, air raid, blitz-happy, bend-don't-break). Selection record updated with ADR-004/005 rows and 16-document stack. **Next: `Artifacts/game-rules-spec.md`** (unblocked — all gating decisions made), then architecture → technical-design → interface-contracts → data-dictionary → ux-spec → acceptance-test-plan → traceability-matrix → runbook → license.
 
 ## Open threads
 
-1. **ADR-001/002/003 are undecided** — randomness, turn structure, mapping literalness. Generation of the game-rules-spec BLOCKS on these three decisions: draft each ADR with options + a recommendation, get operator sign-off, then freeze the outcome into the rules spec. Do not draft rules prose that silently assumes an ADR outcome (PF-5).
+1. **Game-rules-spec is the next and biggest document.** Must honor all five ADR outcomes; every behavior needs equivalence-class completeness (PF-6): resolution bands, trigger conditions, resource budgets, edge cases (end of possession, tie-break, timeout/disconnect forfeit rules). ID scheme `GL-RS-<n>`. Starter play vocabulary + 4 playbook contents are content design owned by this document + balance data.
 2. **Technology stack unchosen.** Every technology named in the technical design requires a prior `_dependency-log.md` entry (PF-1). Candidate constraints already fixed: agent-buildable, browser-testable, deployable to a Hostinger VPS by an agent, deterministic engine testable headlessly.
-3. **Hostinger VPS specs unknown** (plan tier, RAM, OS). Needed for the runbook. Operator-only question — ask when drafting L5.
-4. **Play vocabulary source.** "Real, named American football plays" — generation needs a concrete starter set (e.g., Counter Trey, Cover 2, play-action) chosen for recognizability without any team/league branding (PI-5). This is content design inside the rules spec / balance data, not a dependency.
-5. **Standing ADR rule** (PI-11): new two-way decisions surfaced in generation → ADR draft + recommendation → operator sign-off.
+3. **Hostinger VPS specs unknown** (plan tier, RAM, OS). Needed for the runbook (PRD open question A-1). Operator-only question — ask when drafting L5.
+4. **Verification IDs GL-AT-1..22 are committed in the PRD** — the acceptance-test-plan MUST define exactly these (bijection, PF-3); add more only for rules-spec behaviors (GL-RS-*).
+5. **Standing ADR rule** (PI-11): new two-way decisions surfaced in generation → ADR draft + recommendation → operator sign-off. Used twice (ADR-004, ADR-005).
 
 ## Operator directives to honor every session
 
