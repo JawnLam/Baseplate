@@ -22,7 +22,7 @@ Needs_Processing: false
 
 ## Options
 
-1. **Alternating possessions.** Players swap Offense/Defense roles when possession changes (score, turnover, punt, turnover on downs). A playbook is a complete "team": offensive plays plus defensive schemes. The final score settles the match.
+1. **Alternating possessions.** Players swap Offense/Defense roles when possession changes (any drive ender — score, turnover, punt, turnover on downs, safety, missed field goal). A playbook is a complete "team": offensive plays plus defensive schemes. The final score settles the match.
 2. **Fixed roles per match.** One player is Offense for the whole match against a drive limit; the other is Defense. Sharper asymmetry, simpler state machine; delivers half the football experience per match and needs an artificial win yardstick (beat-the-clock, or home-and-away paired matches).
 
 ## Decision
@@ -34,7 +34,7 @@ Needs_Processing: false
 - A **playbook is a two-sided team bundle** (offensive plays + defensive schemes) — this defines the playbook data entity in `data-dictionary.md` and the ready-made playbook requirement (PRD GL-FR-8).
 - The match is structured as a **fixed, even number of possessions per player** (count set in balance data; `game-rules-spec.md` defines the structure and the tie-break), so both players get identical offensive opportunity and the score is a fair verdict.
 - Both players experience both sides of the mind game every match — the full play-calling fantasy, and double the strategic surface each playbook must support.
-- The engine models an explicit **possession state machine** (whose transitions are exactly: score, turnover, punt, turnover on downs — PRD GL-FR-1); balance is measured per-possession in the sim harness.
+- The engine models an explicit **possession state machine** whose transitions are exactly the drive enders PRD GL-FR-1 names and the rules specification owns (score, turnover, punt, turnover on downs, safety, missed field goal); balance is measured per-possession in the sim harness.
 - Per-down asymmetry is preserved (Offense and Defense play by different rules within a down); only match-level identity is symmetric.
 
 ## Alternatives rejected

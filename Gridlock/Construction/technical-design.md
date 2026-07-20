@@ -53,7 +53,7 @@ The client must never import the engine: anything the engine could compute clien
 - `MatchConfig` — the loaded balance data (tunables, matchup matrix, pool, both playbooks) + `seed`.
 - `MatchState` — immutable snapshot: phase, possession index, score, LOS, down, distance, per-player: CP, hand (card instance ids), deck order, discard, consecutive-autocommit counters; RNG cursor; regulation/tiebreak bookkeeping.
 - `PlayerView` — the projection of `MatchState` legal for one player to see (own hand, public state, per GL-RS-11). **The server only ever serializes `PlayerView`, never `MatchState`.**
-- `DownInput` — `{commit: cardInstanceId}` | `{declare: 'normal'|'punt'|'fg'}` | `{scout: true}` | `{auto: true}`.
+- `DownInput` — `{commit: cardInstanceId}` | `{declare: 'normal'|'punt'|'fg'}` | `{scout: true}` | `{auto: true}` | `{concede: true}`.
 - `EngineEvent` — the match-log event union (`interface-contracts.md` §5 defines the serialized form).
 
 ### 3.2 API (pure functions; no mutation, no I/O)
