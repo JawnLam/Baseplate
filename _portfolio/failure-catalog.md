@@ -91,6 +91,30 @@ Each entry: name, trigger, why it matters, fix, prevention. Seeded with the five
 
 **Prevention:** During the consistency audit (`05-GATES.md` Gate 1, "cross-references resolve within `Artifacts/`"), grep every `Artifacts/` document for references to the four cartridge-level filenames; any hit is a defect. Front-run it in generation: when citing a source from inside `Artifacts/`, confirm the target also lives in `Artifacts/`. Catching it at Gate 1 (as the datestamper did) rather than at the stranger test (as Linkrot did) is the win.
 
+## PF-8 — Unparameterized acceptance metric
+
+*Added 2026-07-20 from the Gridlock cartridge (third cartridge; first game). Surfaced by the Gate-2 evaluator as a non-blocking observation on a run that otherwise SHIPPED clean.*
+
+**Trigger:** A success metric or acceptance criterion references a threshold ("within the band set in the balance data", "below the data-defined ceiling") that no schema, data file, or tunables registry actually names as an extractable value. The prose promises a number lives somewhere; nowhere does.
+
+**Why it matters:** It passes the consistency audit (every cross-reference resolves; the sentence is internally coherent) and usually survives the stranger test (two builders still build the identical product — the gap is in the *acceptance readout*, not behavior). But at verification time the threshold gets invented ad hoc by whoever runs the test, making the acceptance result unreproducible and quietly negotiable — the exact failure the verification layer exists to prevent.
+
+**Fix:** Name the threshold as a first-class key in the stack's data schema (in Gridlock: `balance_possession_score_band`, `balance_playbook_winrate_ceiling` added to the tunables appendix), marked as an acceptance input, not an engine input.
+
+**Prevention:** During generation of any L4 document or success-metric section, for every comparative phrase ("within", "below", "at most", "no more than") ask: *does the number this compares against exist as an extractable field somewhere in the stack?* If it only exists as prose, parameterize it. Kin to PF-3 (the bijection breaks at the value level rather than the ID level) and PF-6 (an implicit decision hiding in confident prose).
+
+## PF-9 — Cross-document enumeration drift
+
+*Added 2026-07-20 from the Gridlock cartridge's close-out packaging probe (the first run of the 06-CLOSE-OUT orientation probe — the new gate earning its first catch).*
+
+**Trigger:** A closed set (here: the six drive enders) is restated in full in multiple documents instead of being owned by one and cited by the rest. The copies drift — the PRD and an ADR listed four enders, the rules spec (correctly) listed them all, and an acceptance test invented a fifth count ("the five legal enders"). Same genus: a summary document (the packaging bootstrap) restating per-document metadata (precedence ranks) that then disagreed with the front-matter fields of record.
+
+**Why it matters:** Each copy is locally plausible, so the drift passes per-document consistency passes, and Gate 1's cross-reference check only verifies that references *resolve*, not that restated *content* agrees. Precedence rules resolve the conflict formally, but a builder reading the lower-precedence copy first builds the wrong mental model — and a drifted count in a *test* description quietly weakens verification.
+
+**Fix:** Give every closed set exactly one owning document; every other mention either cites the owner or names the set only ("the drive enders GL-RS-3 enumerates"), never re-lists it. For metadata (ranks, statuses), machine-check summaries against the fields of record.
+
+**Prevention:** During generation, treat any full restatement of an enumerable set outside its owning document as a defect (cite, don't copy). During close-out packaging (`06-CLOSE-OUT.md` step 5), the mechanical check verifies bootstrap-restated metadata against front-matter fields. The orientation probe is the backstop that caught all of it here.
+
 ## Adding new entries
 
 At each cartridge close-out (and whenever two consecutive stranger-test reruns are blocked by the same question class), add the new failure mode here in the same format: name (PF-n), trigger, why, fix, prevention. The catalog grows; every new cartridge loads it; the failure recurs less. This is the portfolio's compounding value.

@@ -10,7 +10,7 @@ Needs_Processing: false
 
 # Contributing to Baseplate
 
-Baseplate ships at v1.0.0. This document says what is in-scope without a major bump, what requires one, and the content-zone boundary that keeps `git pull` from clobbering your work.
+Baseplate ships at v1.1.0. This document says what is in-scope without a major bump, what requires one, and the content-zone boundary that keeps `git pull` from clobbering your work.
 
 ## Content zones
 

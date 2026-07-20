@@ -69,6 +69,8 @@ A shipped stack meets reality and must change. Do not hand-edit ad hoc. Run the 
 
 For a stack of any origin (even one Baseplate did not produce): run Gate 1 and Gate 2 as read-only checks and emit a findings report. Do not edit the stack — report what fails, classified by gate criterion.
 
-## Close-out (every session type)
+## Close-out
 
-End with a state write to `_design-state.md` (or a loud sandbox declaration), and — at cartridge close — an update to `_portfolio/failure-catalog.md` with any new failure mode the engagement surfaced (OFR-12/13).
+**Per session:** end with a state write to `_design-state.md` (or a loud sandbox declaration).
+
+**Per cartridge (after Gate 2 SHIP):** the gates passing does NOT end the engagement. Run the **close-out packaging protocol — `06-CLOSE-OUT.md` (OFR-16)**: restructure to the handoff layout (`AI-BOOTSTRAP.md` + `Construction/` + `Records/` + `Build/`), write the manifest, write the product bootstrap with its operator-input register, verify the package (mechanical check + fresh-instance orientation probe), then the final state write and an update to `_portfolio/failure-catalog.md` with any new failure mode the engagement surfaced, traced in `_meta/TRACEABILITY.md` in the same change (OFR-12/13).
