@@ -15,13 +15,11 @@ _USER.md
 !Example-Product-*/_design-state.md
 !Example-Product-*/_dependency-log.md
 
-# Gridlock carve-out (2026-07-20): this cartridge is authored from an ephemeral
-# remote environment where untracked files are destroyed at session end — the
-# git repo IS the persistent store, so the working-state files must be tracked
-# (P2: state lives in files). Remove this block to return them to private.
-!Gridlock/Sessions/
-!Gridlock/_design-state.md
-!Gridlock/_dependency-log.md
+# Gridlock (packaged 2026-07-20 per _baseplate-engine/06-CLOSE-OUT.md): the
+# close-out layout nests working-state files under Gridlock/Records/, which the
+# single-level Operator-Private patterns above do not match — the packaged
+# cartridge ships fully tracked. (The pre-packaging carve-out lines for
+# Gridlock/Sessions/ etc. are no longer needed and were removed.)
 
 # Filesystem / workspace noise
 .DS_Store
