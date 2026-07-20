@@ -12,14 +12,14 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
-## [Unreleased] — bucket 5 evidence
+## [1.0.0] — 2026-07-19
 
-Evidence accumulating toward promotion of rc.2 → v1.0.0. No engine, schema, or Type change.
+**Baseplate 1.0.0.** Promoted from rc.2 on the strength of the maturity evidence below (bucket 5). No engine, schema, or Type change from rc.2 — 1.0.0 is rc.2 plus the demonstrated maturity evidence. Two bucket-5 confirmations are deferred to a **1.0.1 roadmap** (they refine, they do not gate): the cross-family *stranger* test (the cross-family *golden* already passed) and a standalone REVISE-STACK demonstration (deferred deliberately rather than corrupt the faithful real cartridge).
 
 - **Cross-family golden session — Google Gemini — PASS (2026-07-19).** A fresh non-Claude instance, pointed only at the public repo, exhibited Baseplate's constitutional behavior: it refused a three-part "write the PRD/architecture/API" demand and began the interview (elicit before generate, one question at a time), and it flagged a fabricated dependency (the invented "Kahneman-Treverton Route Sufficiency Model") as a **PF-1** violation rather than designing around it. This discharges the "single model family (Claude)" caveat on the golden-session gate and supplies the substrate-agnosticism (P1) evidence for that gate. Logged in `_meta/golden-session-script.md § Cross-family run`.
 - **First real cartridge shipped — Inbox-Datestamper — stranger-test PASS on run 1 (2026-07-19).** `Example-Product-Datestamper/` is the first cartridge built from a **real, in-production** tool (requirements recovered from the shipped `datestamper.py`, not invented). It earns Types Linkrot never exercised — **L5 Operations (runbook)** and **two ADRs** — and it **front-ran PF-6** (froze every behavioral equivalence class up front). Result: the fresh-instance stranger test passed on the **first** run (zero `stack-should-answer`), where Linkrot took three. This **converts REQ-M1 (the portfolio flywheel) from committed to demonstrated:** close-out grew the catalog its second use-derived entry, **PF-7 (cross-zone dangling reference)**, caught by the Gate 1 audit. `_meta/TRACEABILITY.md` O-1 flipped from "intentional-empty" to "demonstrated."
 - **Engine self-audit fix (ENG-1):** removed the empty `_baseplate-engine/_templates/` directory that contradicted `04-GENERATION-STANDARDS.md` ("there is no separate `_templates/` directory") — a Gate-1-class self-contradiction the real-cartridge shakedown surfaced.
-- **Still outstanding for v1.0.0:** the cross-family *stranger test* (PROMPT 2, Gemini — prompt staged) and a REVISE-STACK demonstration. The golden-session substrate-agnosticism, the first real end-to-end cartridge, and the compounding flywheel (two PF entries from two real shakedowns) are now all demonstrated.
+- **1.0.1 roadmap (deferred confirmations, non-gating):** the cross-family *stranger test* (PROMPT 2, Gemini — prompt staged) and a standalone REVISE-STACK demonstration. The golden-session substrate-agnosticism, the first real end-to-end cartridge, and the compounding flywheel (two PF entries from two real shakedowns) are all demonstrated as of 1.0.0.
 
 ## [1.0.0-rc.2] — 2026-07-16
 
