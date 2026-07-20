@@ -40,8 +40,20 @@ Any unchecked box: fix, or operator-waive with a written reason. Then re-run.
 - [ ] **ST-3 Question classification** — every question is `operator-only` or `stack-should-answer`, read **charitably**. **Any `stack-should-answer` question = ship block:** fix the stack, rerun with a fresh instance.
 - [ ] The run is logged in a `BASEPLATE_Stranger_Test_Log` (stranger model + date, verbatim outputs, per-criterion results, question-classification table, rerun count).
 
+## Close-out packaging (per stack — after Gate 2 SHIP; OFR-16)
+
+Walk the checklist at the end of `06-CLOSE-OUT.md`. Headline items:
+
+- [ ] Final layout exact: product `AI-BOOTSTRAP.md` + `Construction/` + `Records/` + `Build/` — nothing else at top level.
+- [ ] Reference sweep clean: no `Artifacts` (old name) or Records-file references inside `Construction/`.
+- [ ] `Construction/MANIFEST.md` written; hashes verified.
+- [ ] Product bootstrap has all nine required sections, including the complete operator-input register with when-to-ask triggers.
+- [ ] `Build/` seeded (`build-state.md`, `deviations.md`).
+- [ ] Packaging verification: mechanical check green AND fresh-instance orientation probe passed.
+
 ## Overall
 
 - [ ] Gate 1 clean (or every finding waived in writing).
 - [ ] Gate 2 passed (no `stack-should-answer` questions) with a fresh instance.
+- [ ] **Close-out packaging complete (`06-CLOSE-OUT.md` checklist green) — the engagement is not done at SHIP.**
 - [ ] Any new failure mode surfaced is added to `_portfolio/failure-catalog.md` and traced in `_meta/TRACEABILITY.md` in the same change.
