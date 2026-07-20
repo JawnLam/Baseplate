@@ -79,6 +79,18 @@ Each entry: name, trigger, why it matters, fix, prevention. Seeded with the five
 
 **Prevention:** During generation (`04-GENERATION-STANDARDS.md`), for every behavior ask "would two builders resolve this the same way?" — if not, it is an implicit decision that must be made explicit, not absorbed (PF-5's cousin at the behavioral level). The stranger test is the backstop that catches what generation missed; two consecutive reruns blocked by the same class escalate here.
 
+## PF-7 — Cross-zone dangling reference
+
+*Added 2026-07-19 from the Inbox-Datestamper cartridge (the first **real** product; second use-derived entry — the flywheel growing).*
+
+**Trigger:** A document *inside* `Artifacts/` references a cartridge-level file the stranger never receives — the interview (`_product-interview.md`), the selection record (`_selection-record.md`), the dependency log (`_dependency-log.md`), or the stranger-test log (`stranger-test-log.md`). The reference resolves for the author (who sees the whole cartridge) but dangles for the stranger (who gets only the frozen `Artifacts/` folder, ONF-5).
+
+**Why it matters:** It silently breaks the self-containment the stranger test depends on. Linkrot hit this at its **first stranger-test run** (its acceptance plan cited `stranger-test-log.md`, absent from the folder). It recurred in the datestamper draft — twice (an acceptance-plan cite of `stranger-test-log.md` and a traceability cite of `_dependency-log`). A recurrence across two cartridges of the same class is exactly the signal that promotes a finding to the catalog.
+
+**Fix:** Remove the cross-zone reference or replace it with an in-`Artifacts/` source. State the fact the reader needs inline (e.g., "the stranger test is a separate gate recorded outside this folder") rather than pointing at the out-of-folder file. Trace requirements to in-folder design elements, not to cartridge-level logs.
+
+**Prevention:** During the consistency audit (`05-GATES.md` Gate 1, "cross-references resolve within `Artifacts/`"), grep every `Artifacts/` document for references to the four cartridge-level filenames; any hit is a defect. Front-run it in generation: when citing a source from inside `Artifacts/`, confirm the target also lives in `Artifacts/`. Catching it at Gate 1 (as the datestamper did) rather than at the stranger test (as Linkrot did) is the win.
+
 ## Adding new entries
 
 At each cartridge close-out (and whenever two consecutive stranger-test reruns are blocked by the same question class), add the new failure mode here in the same format: name (PF-n), trigger, why, fix, prevention. The catalog grows; every new cartridge loads it; the failure recurs less. This is the portfolio's compounding value.

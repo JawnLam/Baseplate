@@ -27,7 +27,7 @@ scope: subject-agnostic
 | OFR-6 generation standards; dependency verified | `04-GENERATION-STANDARDS.md`; `_dependency-log.md` | consistency audit (dependency log complete) | PF-1 (fabrication); PF-3 (orphans) |
 | OFR-7 write for the stranger | `04-GENERATION-STANDARDS.md` std 8 | stranger test (ST-1/ST-3) | PF-5 |
 | OFR-8 sequence (F8) | `00-START-HERE.md`; `BOOTSTRAP-NEW-STACK.md` | golden session (E-2 lock order) | — |
-| OFR-9 consistency audit | `05-GATES.md` Gate 1 | run per cartridge | PF-1/3/5 |
+| OFR-9 consistency audit | `05-GATES.md` Gate 1 | run per cartridge | PF-1/3/5/7 |
 | OFR-10 stranger test = ship gate | `05-GATES.md` Gate 2 | run per cartridge; `BASEPLATE_Stranger_Test_Log` | — |
 | OFR-11 triage + catalog-feed | `05-GATES.md`; `_portfolio/failure-catalog.md` | close-out check | — |
 | OFR-12 portfolio failure catalog | `_portfolio/failure-catalog.md` (Grows-Through-Use Zone, D-5) | E-5 (seeded); loaded at session start | all PF |
@@ -42,11 +42,11 @@ scope: subject-agnostic
 
 ## Failure modes (portfolio catalog)
 
-Every `PF-n` in `_portfolio/failure-catalog.md` (PF-1..PF-5 seeded; **PF-6 added from the Linkrot shakedown**) appears above as a "failure prevented." New PF entries added at cartridge close-out must be traced here in the same change.
+Every `PF-n` in `_portfolio/failure-catalog.md` (PF-1..PF-5 seeded; **PF-6 added from the Linkrot shakedown**; **PF-7 added from the Inbox-Datestamper cartridge — the first real product**) appears above as a "failure prevented." New PF entries added at cartridge close-out must be traced here in the same change. PF-7 (cross-zone dangling reference) is prevented by OFR-9's Gate 1 cross-reference-resolution check.
 
 ## Orphans
 
 Goal: empty. Disposition each: `gap — needs enforcement`, `gap — needs verification`, or `intentional`.
 
-- **O-1 · REQ-M1 flywheel is committed but literally empty at v0.1.** The moat mechanism (`_portfolio/`) exists and is seeded, but its compounding value is unrealized until real cartridges accumulate. Disposition: **intentional (v0.x)** — re-assess after the shakedown + first products; tracked in `_meta/vetting-rubric-filled.md`.
-- Gap count: **0** structural gaps (O-1 is intentional/maturity, not a missing chain).
+- **O-1 · REQ-M1 flywheel — DEMONSTRATED (2026-07-19).** The moat mechanism (`_portfolio/`) is no longer committed-but-empty: the first **real** cartridge (Inbox-Datestamper, `Example-Product-Datestamper/`) ran end-to-end and grew the catalog its second use-derived entry, **PF-7**, at close-out (PF-6 was the first, from the Linkrot shakedown). The compounding loop — real cartridge → new failure mode → catalog entry → loaded at the next session start → failure recurs less — has now fired twice. Disposition: **resolved (demonstrated)**; the flywheel keeps growing with each subsequent cartridge.
+- Gap count: **0** structural gaps (O-1 now demonstrated, not merely intentional).
