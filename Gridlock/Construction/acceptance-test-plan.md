@@ -33,7 +33,7 @@ Environments: R1/R2 anywhere Node runs; R3 against a locally launched server; R4
 
 | ID | Verifies | Ring | Procedure → pass criteria |
 |----|----------|------|---------------------------|
-| GL-AT-1 | GL-FR-1 | R2 | Run 100 sim matches; assert every match has exactly 2 players' role states, roles swap on every possession transition, and transitions occur only on the five legal enders (GL-RS-3). |
+| GL-AT-1 | GL-FR-1 | R2 | Run 100 sim matches; assert every match has exactly 2 players' role states, roles swap on every possession transition, and transitions occur only on the drive enders GL-RS-3 enumerates. |
 | GL-AT-2 | GL-FR-2 | R1+inspection | Automated: every pool card name matches the allowlist in the balance set. Manual: reviewer confirms all names are generic football vocabulary; zero team/league/player references. |
 | GL-AT-3 | GL-FR-3 | R3 | Protocol trace of 20 downs: no message reveals either commitment before both are locked; `reveal` arrives to both clients carrying both cards. |
 | GL-AT-4 | GL-FR-4 | R1 | For every matchup cell: constructed resolutions land inside the modified band; turnover/breakaway events occur **only** in cells (post-clause) with nonzero probabilities for them. |
@@ -44,7 +44,7 @@ Environments: R1/R2 anywhere Node runs; R3 against a locally launched server; R4
 | GL-AT-9 | GL-FR-9 | R4 | A human completes a full solo match vs AI on a phone, start → result screen, no errors. |
 | GL-AT-10 | GL-FR-10 | R3+R4 | R3: two test clients queue and get matched; a lone client gets an AI match after the backfill window. R4: two humans on separate phones complete a matchmade match. |
 | GL-AT-11 | GL-FR-11 | R4 | On iOS Safari and Android Chrome: install to home screen; complete a match portrait one-thumbed; desktop browser completes the same flows. |
-| GL-AT-12 | GL-FR-12 | R2+R1 | Every sim and integration match produces a log passing schema validation with a terminal `end` event (void-crash exception per `technical-design.md` §6); DB row ↔ log file invariant holds (data-dictionary §5.3). |
+| GL-AT-12 | GL-FR-12 | R2+R1 | Every sim and integration match produces a log passing schema validation with a terminal `end` event (void-crash exception per `technical-design.md` §6); DB row ↔ log file invariant holds (data-dictionary §5, invariant 3). |
 | GL-AT-13 | GL-FR-13 | R3 | Fresh client: `hello` with new device_id yields player_id + generated handle; no credential prompt exists anywhere in the client. |
 | GL-AT-14 | GL-FR-14 | R2 | `sim run --matches 1000` completes headless, emits 1,000 valid logs + an aggregate stats report (win rates, event rates, duration distribution). |
 | GL-AT-15 | GL-NFR-1 | R2 | Replay all 1,000 logs from GL-AT-14: `replay()` reproduces every draw and outcome exactly; zero divergences. |

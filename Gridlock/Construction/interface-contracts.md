@@ -79,7 +79,7 @@ Each error is terminal for the triggering message only; the connection stays ope
 
 Four files; canonical initial content is `game-rules-spec.md` Appendices A–D. Common header on each: `{balance_schema_version: "1.0.0", set_name: string, created: iso8601-date}`.
 
-- **`tunables.json`** — every ⚙ scalar from Appendix D plus `matchmaking_backfill_seconds`, `resume_window_seconds`, AI tunables (`technical-design.md` §5): flat map `{name: number | int-pair}`. Unknown keys → load rejection (typo protection).
+- **`tunables.json`** — every ⚙ value from Appendix D plus `matchmaking_backfill_seconds`, `resume_window_seconds`, AI tunables (`technical-design.md` §5): flat map whose values are exactly the shapes Appendix D uses — `number` | `[int, int]` pair (bands) | small keyed table of numbers (`tier_cost_map`, `fg_table`; keys serialized as strings in JSON). Unknown keys → load rejection (typo protection).
 - **`matchup.json`** — `{cells: {"<OCAT>x<DCAT>": {band: [int,int], events: {INC?: bp, SACK?: bp, INT?: bp, FUM?: bp, BRK?: bp}}}}` — exactly 30 cells (6 offensive × 5 defensive categories, GL-RS-26); probabilities in basis points (integers, 100 bp = 1%).
 - **`pool.json`** — `{cards: [{card_id: string(slug), name, side: "O"|"D", category, tier: -1|0|1|2, clause?: {cond: {kind: "VS_CAT"|"PREV"|"DIST"|"ZONE", ...kind-specific fields}, mod: {kind: "BAND_SHIFT"|"EVENT_DELTA", ...}}}]}` — clause kinds exactly per GL-RS-24; cost is derived from tier via `tunables.tier_cost_map`, never stored (single source of truth).
 - **`playbooks.json`** — `{playbooks: [{playbook_id, name, offense: [{card_id, count}], defense: [{card_id, count}]}]}` — sums and zero-cost minimums enforced at load (GL-RS-38).

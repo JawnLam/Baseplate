@@ -7,14 +7,18 @@ Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
 Needs_Processing: false
 doc_type: baseplate-cartridge-design-state
-baseplate_Cartridge_Phase: "shipped"
+baseplate_Cartridge_Phase: "packaged"
 ---
 
 # Gridlock — Design State
 
 > Read at session start, written at session end (P2). Multi-session engagement.
 
-## Current phase — SHIPPED 2026-07-20
+## FINAL — PACKAGED 2026-07-20 (cartridge closed; this file is now immutable history)
+
+Close-out packaging executed per `_baseplate-engine/06-CLOSE-OUT.md` (v1.1.0 — the protocol this cartridge's close-out request created, run here for the first time). Layout: `AI-BOOTSTRAP.md` + `Construction/` (former `Artifacts/`, 16 docs + MANIFEST) + `Records/` (this folder) + `Build/` (seeded). Mechanical check ALL GREEN (manifest hashes, bootstrap refs + TOC, reference sweep, rank-vs-front-matter). Orientation probe (fresh instance): PASSED — verified manifest unprompted, correct product statement, correct Phase-1 plan; its consistency findings (bootstrap rank claim; drive-ender enumeration drift in PRD/ADR-004/GL-AT-1; tunables.json value-shape gap; GL-RS-31 drafting fragment; DownInput missing concede; a §-citation nit) were ALL fixed same day, manifest regenerated, checks re-run green. New portfolio entry: PF-9 (cross-document enumeration drift). No re-probe required under 06's trigger (the probe's only unresolvable references were in Records/, harmless by declared design); the strengthened mechanical check now covers the metadata-drift class permanently. **Handoff: point any builder AI at the `Gridlock/` folder — `AI-BOOTSTRAP.md` does the rest.**
+
+## Phase history — shipped 2026-07-20 (superseded by PACKAGED above)
 
 Gate 1 passed (scripted mechanical audit, no waivers). Gate 2 passed **on the first run**: fresh Opus stranger + independent evaluator; ST-1 PASS, ST-2 PASS, ST-3 = 12 questions, zero `stack-should-answer` (full record: `stranger-test-log.md`). Evaluator's non-blocking observation (PRD §5 acceptance thresholds unnamed in data schema) fixed same day: `balance_possession_score_band` + `balance_playbook_winrate_ceiling` added to Appendix D. All 16 documents at `baseplate_Document_Status: shipped`. **The stack is done. What remains is not Baseplate's NEW-STACK route:** (a) build phase — hand `Artifacts/` to the builder agent (the stranger's own Phase-1 plan is a sound starting point); (b) operator answers R-1 (VPS specs) + R-2 (domain) before deployment; (c) playtest-driven balance changes → REVISE-STACK protocol if they ever touch rule semantics (pure ⚙ data edits don't). Portfolio updated with PF-8.
 

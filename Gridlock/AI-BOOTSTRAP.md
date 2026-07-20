@@ -29,26 +29,26 @@ Before reading further: open `Construction/MANIFEST.md`, recompute the SHA-256 o
 - **`Records/`** — how these documents were made (interview, selection rationale, session logs, gate records). History: not needed for construction; never modify (§8).
 - **`Build/`** — **your workspace.** All code and artifacts you produce go here (§6).
 
-**Construction documents, in reading order** (dependency-layer order; the precedence rank is the number — on any conflict between documents, the lower rank wins):
+**Construction documents.** Read them top-to-bottom (dependency-layer order). The **Rank** column is each document's `baseplate_Precedence_Rank` front-matter field: on any conflict between two documents, the lower rank wins. Two documents carry no rank by design — the traceability matrix verifies and the license licenses; neither competes in precedence.
 
-| # | Document | One-line purpose |
-|---|---|---|
-| 1 | `prd.md` | What Gridlock must do and must not do — 22 numbered requirements, non-goals, success metrics; wins on scope |
-| 2 | `game-rules-spec.md` | The complete rules of play, GL-RS-1..38 — law for gameplay semantics; appendices carry the initial balance data (matchup matrix, 42-card pool, 4 playbooks, tunables) |
-| 3 | `architecture.md` | Four components; the load-bearing boundary: a pure deterministic rules engine imported by both server and sim harness |
-| 4 | `adr-001-resolution-randomness.md` | Binding decision: bounded-variance resolution (matchup first, luck only within the window it opens) |
-| 5 | `adr-002-turn-structure.md` | Binding decision: simultaneous commit-then-reveal downs ("the snap") |
-| 6 | `adr-003-netrunner-mapping.md` | Binding decision: football-first vocabulary; the enumerated borrowed-economy boundary |
-| 7 | `adr-004-role-structure.md` | Binding decision: players alternate offense/defense with possession |
-| 8 | `adr-005-ready-made-playbooks.md` | Binding decision: four ready-made playbooks; no deck-building in the prototype |
-| 9 | `technical-design.md` | Stack (Node/TypeScript/Preact/SQLite/Caddy, versions pinned & verified), engine API, the exact PCG32 PRNG, AI opponent, failure policies |
-| 10 | `interface-contracts.md` | The frozen contracts: WebSocket protocol, balance-data JSON schemas, match-log format — schema is law, code conforms |
-| 11 | `data-dictionary.md` | Every stored field, its constraints, and the no-PII rule |
-| 12 | `ux-spec.md` | Screens, the match UI's three zones, every state's presentation, accessibility requirements |
-| 13 | `traceability-matrix.md` | The requirement↔verification bijection (60 → 30, zero orphans) |
-| 14 | `acceptance-test-plan.md` | **The definition of done** — GL-AT-1..30 across four test rings |
-| 15 | `runbook.md` | Deploy, health, backup, rollback on the operator's VPS — executable by you alone |
-| 16 | `license.md` | Private, all rights reserved (a recorded default) |
+| Read | Rank | Document | One-line purpose |
+|---|---|---|---|
+| 1 | 1 | `prd.md` | What Gridlock must do and must not do — 22 numbered requirements, non-goals, success metrics; wins on scope |
+| 2 | 2 | `game-rules-spec.md` | The complete rules of play, GL-RS-1..38 — law for gameplay semantics; appendices carry the initial balance data (matchup matrix, 42-card pool, 4 playbooks, tunables) |
+| 3 | 3 | `architecture.md` | Four components; the load-bearing boundary: a pure deterministic rules engine imported by both server and sim harness |
+| 4 | 4 | `adr-001-resolution-randomness.md` | Binding decision: bounded-variance resolution (matchup first, luck only within the window it opens) |
+| 5 | 5 | `adr-002-turn-structure.md` | Binding decision: simultaneous commit-then-reveal downs ("the snap") |
+| 6 | 6 | `adr-003-netrunner-mapping.md` | Binding decision: football-first vocabulary; the enumerated borrowed-economy boundary |
+| 7 | 7 | `adr-004-role-structure.md` | Binding decision: players alternate offense/defense with possession |
+| 8 | 8 | `adr-005-ready-made-playbooks.md` | Binding decision: four ready-made playbooks; no deck-building in the prototype |
+| 9 | 9 | `technical-design.md` | Stack (Node/TypeScript/Preact/SQLite/Caddy, versions pinned & verified), engine API, the exact PCG32 PRNG, AI opponent, failure policies |
+| 10 | 10 | `interface-contracts.md` | The frozen contracts: WebSocket protocol, balance-data JSON schemas, match-log format — schema is law, code conforms |
+| 11 | 11 | `data-dictionary.md` | Every stored field, its constraints, and the no-PII rule |
+| 12 | 12 | `ux-spec.md` | Screens, the match UI's three zones, every state's presentation, accessibility requirements |
+| 13 | — | `traceability-matrix.md` | The requirement↔verification bijection (60 → 30, zero orphans) |
+| 14 | 14 | `acceptance-test-plan.md` | **The definition of done** — GL-AT-1..30 across four test rings |
+| 15 | 13 | `runbook.md` | Deploy, health, backup, rollback on the operator's VPS — executable by you alone; wins on deployment facts (hence it outranks the test plan) |
+| 16 | — | `license.md` | Private, all rights reserved (a recorded default) |
 
 ## 4. Operator-input register
 

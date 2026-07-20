@@ -48,7 +48,7 @@ Gridlock is a prototype to test one hypothesis: *the down-by-down play-calling d
 
 | ID | Requirement (what, not how) | Verified by |
 |----|------------------------------|-------------|
-| GL-FR-1 | A match is played by exactly two players in asymmetric per-down roles — one side on Offense, one on Defense — and the roles alternate with possession (after a score, turnover, punt, or turnover on downs). | GL-AT-1 |
+| GL-FR-1 | A match is played by exactly two players in asymmetric per-down roles — one side on Offense, one on Defense — and the roles alternate with possession, whenever a drive ends (score, turnover, punt, turnover on downs, safety, or missed field goal — the full ender set is owned by `game-rules-spec.md` GL-RS-3). | GL-AT-1 |
 | GL-FR-2 | The playable cards are named after real, generic American football plays and schemes (e.g., "Counter Trey", "Cover 2", "Play-Action Deep Shot"), with no team, league, player, or licensed-property branding. | GL-AT-2 |
 | GL-FR-3 | Each down, both players commit their card selections secretly; neither commitment is revealed to the opponent until both are locked, at which point both are revealed simultaneously ("the snap") and the down resolves. | GL-AT-3 |
 | GL-FR-4 | A down's outcome is determined first by the deterministic matchup of the two revealed commitments, which defines a bounded outcome range; a random draw then selects within that range. Extreme outcomes (turnovers, breakaway gains) are only reachable when the matchup itself opens them. | GL-AT-4 |
