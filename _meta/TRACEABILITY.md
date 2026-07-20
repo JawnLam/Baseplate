@@ -34,6 +34,7 @@ scope: subject-agnostic
 | OFR-13 persist per-cartridge state (P2) | backbone state files; Q11 contract | close-out state write | PF-2 |
 | OFR-14 revision mode | `05-GATES.md § Revision` | shakedown revision pass | — |
 | OFR-15 behavioral completeness — define every parsing/counting equivalence class | `04-GENERATION-STANDARDS.md` std 10 | consistency audit; stranger test (ST-3) | PF-6 (under-specified semantics) |
+| OFR-16 close-out packaging — shipped stack → self-contained handoff folder (product bootstrap + Construction/Records/Build + manifest + operator-input register) | `06-CLOSE-OUT.md`; pointed at from `00-START-HERE.md` (session shape + never-do), `05-GATES.md § Close-out`, `BOOTSTRAP-NEW-STACK.md` Step 6 | `06-CLOSE-OUT.md` checklist: mechanical packaging check + fresh-instance orientation probe | PF-7 at package level (post-restructure reference sweep); un-handoffable "finished" cartridges |
 | ONF-1 markdown-only, manual gates | whole engine; `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md` (manual gate walkthrough) | `_baseplate-engine/_meta/VALIDATION-CHECKLIST.md` | — |
 | ONF-2 context-budget / tiered reads | `00-START-HERE.md` tiers | read-tier compliance (golden session U-b) | — |
 | ONF-3 Baseplate traces in its own matrix | this file | audit walks this matrix | orphan requirement/check |
@@ -42,7 +43,7 @@ scope: subject-agnostic
 
 ## Failure modes (portfolio catalog)
 
-Every `PF-n` in `_portfolio/failure-catalog.md` (PF-1..PF-5 seeded; **PF-6 added from the Linkrot shakedown**; **PF-7 added from the Inbox-Datestamper cartridge — the first real product**) appears above as a "failure prevented." New PF entries added at cartridge close-out must be traced here in the same change. PF-7 (cross-zone dangling reference) is prevented by OFR-9's Gate 1 cross-reference-resolution check.
+Every `PF-n` in `_portfolio/failure-catalog.md` (PF-1..PF-5 seeded; **PF-6 added from the Linkrot shakedown**; **PF-7 added from the Inbox-Datestamper cartridge — the first real product**; **PF-8 added from the Gridlock cartridge — the first game**) appears above as a "failure prevented." New PF entries added at cartridge close-out must be traced here in the same change. PF-7 (cross-zone dangling reference) is prevented by OFR-9's Gate 1 cross-reference-resolution check. PF-8 (unparameterized acceptance metric — a threshold referenced in prose that no schema names as an extractable value) is prevented by OFR-6/OFR-15's generation-time discipline extended to L4 values: every comparative phrase in a success metric or acceptance criterion must resolve to a named, extractable field; checked during generation and at Gate 1 alongside the S-3 extractability checks.
 
 ## Orphans
 
