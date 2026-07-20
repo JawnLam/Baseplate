@@ -5,7 +5,7 @@ title: "Gridlock — License & Attribution"
 baseplate_Product_Slug: "GL"
 baseplate_Doc_Class: license
 baseplate_Layer: 6
-baseplate_Document_Status: internally-consistent
+baseplate_Document_Status: shipped
 Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
 Needs_Processing: false

@@ -6,7 +6,7 @@ baseplate_Product_Slug: "GL"
 baseplate_Doc_Class: functional-spec
 baseplate_Layer: 1
 baseplate_ID_Scheme: "GL-RS-<n>"
-baseplate_Document_Status: internally-consistent
+baseplate_Document_Status: shipped
 baseplate_Precedence_Rank: 2
 Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
@@ -262,4 +262,6 @@ Composition as card × count; offensive decks sum to 20, defensive to 16; zero-c
 
 ## Appendix D — Global tunables summary ⚙
 
-`possessions_per_side 2 · max_tiebreak_rounds 3 · shot_clock_seconds 20 · forfeit_after_consecutive_autocommits 3 · hand_size 4 · cp_possession_floor 3 · cp_income_per_down 1 · cp_cap 6 · scout_cost 2 · tier_cost_map {−1:0, 0:1, +1:2, +2:3} · sack_band [−8,−4] · breakaway_band [15,40] · punt_band [30,45] · touchback_spot 25 · drive_start 25 · fg_max_distance 60 · fg_table {30:95, 40:85, 50:70, 55:45, 60:20} · offensive_deck_size 20 · defensive_deck_size 16 · min_zero_cost_cards 4`
+`possessions_per_side 2 · max_tiebreak_rounds 3 · shot_clock_seconds 20 · forfeit_after_consecutive_autocommits 3 · hand_size 4 · cp_possession_floor 3 · cp_income_per_down 1 · cp_cap 6 · scout_cost 2 · tier_cost_map {−1:0, 0:1, +1:2, +2:3} · sack_band [−8,−4] · breakaway_band [15,40] · punt_band [30,45] · touchback_spot 25 · drive_start 25 · fg_max_distance 60 · fg_table {30:95, 40:85, 50:70, 55:45, 60:20} · offensive_deck_size 20 · defensive_deck_size 16 · min_zero_cost_cards 4 · balance_possession_score_band [30,60] (acceptance band: % of possessions ending in any score, across large sim samples) · balance_playbook_winrate_ceiling 60 (acceptance ceiling: max % win rate of any single playbook across all pairings)`
+
+*(The two `balance_*` entries are acceptance thresholds, not gameplay inputs: the engine never reads them; the sim harness's aggregate report and the balance success metric in `prd.md` §5 do.)*

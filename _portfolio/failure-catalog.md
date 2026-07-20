@@ -91,6 +91,18 @@ Each entry: name, trigger, why it matters, fix, prevention. Seeded with the five
 
 **Prevention:** During the consistency audit (`05-GATES.md` Gate 1, "cross-references resolve within `Artifacts/`"), grep every `Artifacts/` document for references to the four cartridge-level filenames; any hit is a defect. Front-run it in generation: when citing a source from inside `Artifacts/`, confirm the target also lives in `Artifacts/`. Catching it at Gate 1 (as the datestamper did) rather than at the stranger test (as Linkrot did) is the win.
 
+## PF-8 — Unparameterized acceptance metric
+
+*Added 2026-07-20 from the Gridlock cartridge (third cartridge; first game). Surfaced by the Gate-2 evaluator as a non-blocking observation on a run that otherwise SHIPPED clean.*
+
+**Trigger:** A success metric or acceptance criterion references a threshold ("within the band set in the balance data", "below the data-defined ceiling") that no schema, data file, or tunables registry actually names as an extractable value. The prose promises a number lives somewhere; nowhere does.
+
+**Why it matters:** It passes the consistency audit (every cross-reference resolves; the sentence is internally coherent) and usually survives the stranger test (two builders still build the identical product — the gap is in the *acceptance readout*, not behavior). But at verification time the threshold gets invented ad hoc by whoever runs the test, making the acceptance result unreproducible and quietly negotiable — the exact failure the verification layer exists to prevent.
+
+**Fix:** Name the threshold as a first-class key in the stack's data schema (in Gridlock: `balance_possession_score_band`, `balance_playbook_winrate_ceiling` added to the tunables appendix), marked as an acceptance input, not an engine input.
+
+**Prevention:** During generation of any L4 document or success-metric section, for every comparative phrase ("within", "below", "at most", "no more than") ask: *does the number this compares against exist as an extractable field somewhere in the stack?* If it only exists as prose, parameterize it. Kin to PF-3 (the bijection breaks at the value level rather than the ID level) and PF-6 (an implicit decision hiding in confident prose).
+
 ## Adding new entries
 
 At each cartridge close-out (and whenever two consecutive stranger-test reruns are blocked by the same question class), add the new failure mode here in the same format: name (PF-n), trigger, why, fix, prevention. The catalog grows; every new cartridge loads it; the failure recurs less. This is the portfolio's compounding value.

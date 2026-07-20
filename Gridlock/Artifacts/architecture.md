@@ -5,7 +5,7 @@ title: "Gridlock — Architecture"
 baseplate_Product_Slug: "GL"
 baseplate_Doc_Class: architecture
 baseplate_Layer: 2
-baseplate_Document_Status: internally-consistent
+baseplate_Document_Status: shipped
 baseplate_Precedence_Rank: 3
 Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
