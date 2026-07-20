@@ -15,6 +15,14 @@ _USER.md
 !Example-Product-*/_design-state.md
 !Example-Product-*/_dependency-log.md
 
+# Gridlock carve-out (2026-07-20): this cartridge is authored from an ephemeral
+# remote environment where untracked files are destroyed at session end — the
+# git repo IS the persistent store, so the working-state files must be tracked
+# (P2: state lives in files). Remove this block to return them to private.
+!Gridlock/Sessions/
+!Gridlock/_design-state.md
+!Gridlock/_dependency-log.md
+
 # Filesystem / workspace noise
 .DS_Store
 .obsidian/
