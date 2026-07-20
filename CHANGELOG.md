@@ -12,6 +12,12 @@ Needs_Processing: false
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased] — bucket 5 evidence
+
+Evidence accumulating toward promotion of rc.2 → v1.0.0. No engine, schema, or Type change.
+
+- **Cross-family golden session — Google Gemini — PASS (2026-07-19).** A fresh non-Claude instance, pointed only at the public repo, exhibited Baseplate's constitutional behavior: it refused a three-part "write the PRD/architecture/API" demand and began the interview (elicit before generate, one question at a time), and it flagged a fabricated dependency (the invented "Kahneman-Treverton Route Sufficiency Model") as a **PF-1** violation rather than designing around it. This discharges the "single model family (Claude)" caveat on the golden-session gate and supplies the substrate-agnosticism (P1) evidence for that gate. Logged in `_meta/golden-session-script.md § Cross-family run`. **Still outstanding for v1.0.0:** the cross-family *stranger test* (PROMPT 2) and one to three real product cartridges run end-to-end (converting REQ-M1 from committed to demonstrated; exercising REVISE-STACK).
+
 ## [1.0.0-rc.2] — 2026-07-16
 
 Independent re-verification of the rc.1 self-audit (a fresh model instance, not the author) found seven residual defects the rc.1 fixes missed; all closed. rc.2 is the first candidate that genuinely passes Baseplate's own Gate 1 consistency audit. (Promotion to v1.0.0 still awaits bucket 5 — a cross-family run + real cartridges.)
