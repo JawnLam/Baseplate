@@ -27,6 +27,8 @@ doc_type: baseplate-cartridge-dependency-log
 | Caddy 2.6.2 | TLS reverse proxy / static file server | `apt-cache policy caddy` on Ubuntu 24.04 (candidate 2.6.2-6ubuntu0.24.04.3); caddyserver.com unreachable through session proxy — apt archive used as the authoritative check | 2026-07-20 | verified (Ubuntu 24.04 package) |
 | systemd | Process supervision on the VPS | Ships with Ubuntu 24.04 LTS (assumed VPS OS — see runbook assumption) | 2026-07-20 | verified (OS built-in), OS assumption open |
 | nginx 1.24.0 | Fallback reverse proxy (only if Caddy rejected) | `apt-cache policy nginx` on Ubuntu 24.04 | 2026-07-20 | verified; NOT selected — noted as fallback only |
+| Ubuntu 24.04 LTS | Assumed VPS operating system (runbook §0) | Session container runs Ubuntu 24.04 with live apt archive access (the Caddy/nginx checks above ran against it); Ubuntu 24.04 LTS is a current LTS release | 2026-07-20 | verified (distro exists); VPS-actual OS unconfirmed → runbook R-1 |
+| ufw, cron, journalctl/systemctl | Firewall, scheduler, service tooling named in runbook | Ubuntu 24.04 base-system components (ship with the assumed OS) | 2026-07-20 | verified as OS built-ins, contingent on OS assumption |
 
 *Inspirations, not dependencies (recorded for anti-staleness clarity):* *Android: Netrunner* (mechanics inspiration only — IP excluded per PI-5) and *Marvel SNAP* (pacing/feel reference only, explicitly a suggestion not an anchor per PI-4). Neither is built against; neither belongs in stack documents as a dependency.
 

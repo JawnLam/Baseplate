@@ -7,14 +7,18 @@ Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
 Needs_Processing: false
 doc_type: baseplate-cartridge-design-state
-baseplate_Cartridge_Phase: "generation-complete-pending-gates"
+baseplate_Cartridge_Phase: "shipped"
 ---
 
 # Gridlock — Design State
 
 > Read at session start, written at session end (P2). Multi-session engagement.
 
-## Current phase
+## Current phase — SHIPPED 2026-07-20
+
+Gate 1 passed (scripted mechanical audit, no waivers). Gate 2 passed **on the first run**: fresh Opus stranger + independent evaluator; ST-1 PASS, ST-2 PASS, ST-3 = 12 questions, zero `stack-should-answer` (full record: `stranger-test-log.md`). Evaluator's non-blocking observation (PRD §5 acceptance thresholds unnamed in data schema) fixed same day: `balance_possession_score_band` + `balance_playbook_winrate_ceiling` added to Appendix D. All 16 documents at `baseplate_Document_Status: shipped`. **The stack is done. What remains is not Baseplate's NEW-STACK route:** (a) build phase — hand `Artifacts/` to the builder agent (the stranger's own Phase-1 plan is a sound starting point); (b) operator answers R-1 (VPS specs) + R-2 (domain) before deployment; (c) playtest-driven balance changes → REVISE-STACK protocol if they ever touch rule semantics (pure ⚙ data edits don't). Portfolio updated with PF-8.
+
+## Phase history
 
 **`generation-in-progress`** (as of 2026-07-20, session 02). Generated and internally-consistent so far: `Artifacts/prd.md` (GL-FR-1..14, GL-NFR-1..8, verification IDs GL-AT-1..22 reserved), plus five ADRs — **all five decided by the operator 2026-07-20**: ADR-001 bounded variance, ADR-002 simultaneous reveal, ADR-003 football-first + borrowed economy (borrowing boundary enumerated), ADR-004 alternating possessions, ADR-005 ready-made playbooks (4 archetypes: ground-and-pound, air raid, blitz-happy, bend-don't-break). Selection record updated with ADR-004/005 rows and 16-document stack. **Next: `Artifacts/game-rules-spec.md`** (unblocked — all gating decisions made), then architecture → technical-design → interface-contracts → data-dictionary → ux-spec → acceptance-test-plan → traceability-matrix → runbook → license.
 

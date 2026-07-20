@@ -5,7 +5,7 @@ title: "Gridlock — Runbook"
 baseplate_Product_Slug: "GL"
 baseplate_Doc_Class: runbook
 baseplate_Layer: 5
-baseplate_Document_Status: internally-consistent
+baseplate_Document_Status: shipped
 baseplate_Precedence_Rank: 13
 Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
@@ -15,6 +15,8 @@ Needs_Processing: false
 # Gridlock — Runbook
 
 > **How Gridlock runs, for a stranger.** Audience: an AI agent or technical stranger operating the deployment. The product's owner is non-technical and is never required to execute anything here. This document wins on deployment facts. It absorbs deploy and rollback (no separate deployment document exists in this stack). Setup uses only dependencies verified in the stack's engineering documents (`technical-design.md` §1).
+
+**Notation:** angle-bracket tokens in commands and configs (`<domain>`, `<sha>`, `<date>`, `<yyyy>`, `<mm>`, `<previous-sha>`) are deploy-time parameters, not unresolved content: `<sha>`-family tokens take their values from the release being deployed; `<domain>` takes its value when Open question R-2 resolves.
 
 ## 0. Deployment facts (the one-screen summary)
 

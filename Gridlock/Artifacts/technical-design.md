@@ -5,7 +5,7 @@ title: "Gridlock — Technical Design"
 baseplate_Product_Slug: "GL"
 baseplate_Doc_Class: tech-design
 baseplate_Layer: 3
-baseplate_Document_Status: internally-consistent
+baseplate_Document_Status: shipped
 baseplate_Precedence_Rank: 9
 Date_Added: 2026-07-20
 Date_Modified: 2026-07-20
