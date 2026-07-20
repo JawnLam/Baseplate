@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Operations_Document
-Item_ID: datestamper-runbook
+Item_ID: 087FC9D6-7943-4140-BF82-EAD9A37193D6
 title: "Inbox-Datestamper — Runbook"
 baseplate_Product_Slug: "DS"
 baseplate_Doc_Class: runbook

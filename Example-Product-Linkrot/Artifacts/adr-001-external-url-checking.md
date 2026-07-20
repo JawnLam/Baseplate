@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Design_Document
-Item_ID: linkrot-adr-001
+Item_ID: C50D55EA-1DDD-4873-A97C-C7619FCB6F72
 title: "Linkrot — ADR-001 — External URL checking is opt-in"
 baseplate_Product_Slug: "LR"
 baseplate_Doc_Class: adr

@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Design_Document
-Item_ID: datestamper-technical-design
+Item_ID: 1DB16C8A-E2BB-432B-99CB-11290A86882B
 title: "Inbox-Datestamper — Technical Design & CLI Contract"
 baseplate_Product_Slug: "DS"
 baseplate_Doc_Class: technical-design

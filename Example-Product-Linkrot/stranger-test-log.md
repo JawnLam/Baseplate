@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Stranger_Test_Log
-Item_ID: linkrot-stranger-test-log
+Item_ID: 5F07DABE-DDD4-485A-A261-DB2879EADFA0
 title: "Linkrot — Stranger Test Log"
 baseplate_Product_Slug: "LR"
 baseplate_Stranger_Model: "Fresh Claude instance (no drafting context)"

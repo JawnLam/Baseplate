@@ -1,6 +1,6 @@
 ---
 type: BASEPLATE_Selection_Record
-Item_ID: datestamper-selection-record
+Item_ID: E5FB5944-85B6-4FFD-AD90-513A4AD343ED
 title: "Inbox-Datestamper — Selection Record"
 baseplate_Product_Slug: "DS"
 baseplate_ID_Scheme: "DS-FR-<n> / DS-NFR-<n> / DS-ADR-<n>"

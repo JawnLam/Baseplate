@@ -1,5 +1,5 @@
 ---
-Item_ID: "UUID-OR-SLUG"
+Item_ID: "<UUID>"
 type: BASEPLATE_Requirements_Document
 title: "<Product> — <PRD | Functional Spec | SRS | Acceptance Criteria>"
 baseplate_Product_Slug: ""
