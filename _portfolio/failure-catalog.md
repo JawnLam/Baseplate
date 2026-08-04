@@ -4,7 +4,7 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-portfolio-failure-catalog
 title: "Baseplate — Portfolio Failure Catalog"
 Date_Added: 2026-07-16
-Date_Modified: 2026-07-16
+Date_Modified: 2026-08-04
 Needs_Processing: false
 doc_type: baseplate-portfolio
 role: failure-catalog
@@ -114,6 +114,63 @@ Each entry: name, trigger, why it matters, fix, prevention. Seeded with the five
 **Fix:** Give every closed set exactly one owning document; every other mention either cites the owner or names the set only ("the drive enders GL-RS-3 enumerates"), never re-lists it. For metadata (ranks, statuses), machine-check summaries against the fields of record.
 
 **Prevention:** During generation, treat any full restatement of an enumerable set outside its owning document as a defect (cite, don't copy). During close-out packaging (`06-CLOSE-OUT.md` step 5), the mechanical check verifies bootstrap-restated metadata against front-matter fields. The orientation probe is the backstop that caught all of it here.
+
+## PF-10 — Operational content pinned outside the stack
+
+*Added 2026-07-21 from the PTIS cartridge (fifth cartridge; first production business system). Blocked stranger-test run 1; invisible to every mechanical Gate-1 check.*
+
+**Trigger:** A construction document *cites or delegates to* operational content — query sets, endpoint URLs, portal/board identities, seed lists — that actually lives only outside the frozen stack (the cartridge-level dependency log, the source spec, "the operator's research"), while naming no out-of-folder **file**, so the PF-7 filename sweep passes clean.
+
+**Why it matters:** The stranger cannot build the configured behavior: two builders invent different queries/URLs/targets and produce observably different products. It is PF-7's content-level cousin — the dependence is at the level of *facts*, not links — and it survives every cross-reference-resolution check because nothing dangles; the knowledge simply is not there. In PTIS, four instances blocked run 1 (the press-alert query set, the exact litigation query strings, the state→license-board mapping, the portal URL set) — all present in the cartridge's dependency log and source spec, none in `Artifacts/`.
+
+**Fix:** Move the content itself into the stack — named tunables or appendix entries in the owning design document, with anti-staleness marks (and, for volatile URLs, an explicitly repair-editable posture) — then repoint the citing prose at the in-stack key.
+
+**Prevention:** During generation, for every phrase of the form "the configured X," "per the source's Y," "from the operator's research": confirm the configuration/list itself resides in `Artifacts/`; if it exists only in cartridge logs or source material, inline it. At Gate 1, grep construction documents for delegation phrases ("configured", "the source's", "per the operator's") and resolve each to an in-folder owner. The stranger test remains the backstop that caught it first.
+
+## PF-11 — Source-citation bleed in decomposition
+
+*Added 2026-07-29 from the OmniLattice-Deal-Room cartridge (the first cartridge to **decompose a near-complete monolithic source PRD** into a stack, rather than author from an interview or recover a small tool). Caught at the Gate-1 reference sweep, not the stranger test.*
+
+**Trigger:** When a stack is built by decomposing a large existing source document, that source's own internal apparatus — its section numbers (`§5.7`, `Appendix D`), its scattered pre-existing IDs (`SO-*`, `V-*`, `J2-*`), and its framework vocabulary — survives into the `Artifacts/` documents as references. They resolve for the author (who holds the whole source) but **dangle for the stranger, who receives only the frozen folder** and never sees the source. It is the decomposition-specific cousin of PF-7: the dangling target is the *source document* (or the authoring engine's vocabulary), not a cartridge-level file — so a filename sweep for the four cartridge files misses it.
+
+**Why it matters:** These references pass a naïve consistency pass (they look like ordinary cross-refs) and only reveal themselves as `stack-should-answer` confusion (a builder told to "see §5.7" with no §5.7 in the folder) or as an engine-vocabulary leak that ties the packaged folder back to the authoring system it must stand apart from. In this cartridge, three slipped to Gate 1: a construction doc citing the cartridge-level stranger-test-log, one citing the dependency log, and three engine-vocabulary tokens (`PF-#`, `generation standard N`).
+
+**Fix:** For every citation inherited from the source, resolve it to an in-`Artifacts/` target or inline the fact. **Re-anchor the source's section numbers as your own document's headings** (so `§5.x` resolves intra-doc), **re-cast the source's scattered IDs into the stack's single namespace** (here `DR-*`), and **strip all authoring-engine vocabulary** from the packaged documents.
+
+**Prevention:** During generation of a decomposed stack, treat every inherited `§`/appendix/ID citation as suspect: either it resolves inside `Artifacts/` or it is inlined. At Gate 1, extend the reference sweep beyond the four cartridge filenames to also grep for (a) the authoring engine's vocabulary and (b) bare source-section citations (`§\d`, `Appendix [A-Z]`) that have no in-folder anchor. Catching it at Gate 1 (as here) rather than the stranger test is the win; front-running it in generation (re-anchoring section numbers as you write) is better still.
+
+## PF-12 — Unsourced required input
+
+*Added 2026-08-04 from the AcuityFlow-v1 and AcuityFlow-Potemkin-Demo cartridges (built back-to-back). **Nine of the fourteen stranger-test blocks across the two engagements were this one mode** (three of four in the first cartridge, six of ten in the second), in two structurally dissimilar products — a nine-component regulated clinical system and a two-component single-file facade. Invisible to every mechanical Gate-1 check: every blocked freeze passed the consistency audit cleanly.*
+
+**Trigger:** The stack names a value, artefact, or choice as **required** — and may even parameterise it properly into the tunables registry — but never states **who supplies it, or whether the builder should source it, wait for it, or proceed without it.** The value is correctly registered as *needed*; its **provenance** is missing.
+
+Six instances, all caught by the stranger and none by the audit:
+
+- A datastore named only in a licence table, in a stack that gives decision records to truncation length — so its silence read as "decided somewhere," and it was not.
+- An audit observation window described as a fixed, non-compressible clock with **no framework, no duration, and no registry row** — a duration, which the drafting session's own PF-8 sweep missed because PF-8 greps for *comparatives*.
+- A synthetic-corpus statistical profile required to be "supplied," with no supplier named — on the critical path, so one builder sources it and ships while another waits for an operator input that was never coming.
+- A monetary figure described as operator-supplied with a documented fallback, but with no tunable, no supplier, and no open-question row.
+- Override-reason labels shared across two screens that must agree, authored nowhere.
+- A roster the prose implied held nine items while only the count was authored.
+
+**Why it matters:** PF-5 is a *silent* assumption absorbed into confident prose; PF-8 is a *threshold with no extractable value*. This is the third case and it hides between them — **the item is explicit and often correctly parameterised, so both existing sweeps pass it**, and the resulting ambiguity is not about the value but about the *act*: source it, or wait. Two competent builders resolve that differently, and the divergence is observable in the shipped product. It surfaces only when a reader tries to *use* the documents, which is exactly what the stranger test is and the audit is not.
+
+**Fix:** Give the item a **named supplier**, and state the consequence of the answer not being available yet. The generalising fix that closed it in both cartridges was to redefine the tunables registry's `Kind` column as the answer to *"who supplies this, and do I wait for them?"* — `Product` (this stack decided it; do not ask), `Site`/`Operator` (**wait for them**; each carries an open question), `Builder` (**yours; do not wait**) — plus a standing rule that a required value with no named supplier is a defect the builder must raise. Where the supplier is the operator, add the open-question row and state the honest default the build proceeds on (counts-only, a visible placeholder, a documented fallback mode).
+
+**Prevention:** During generation, sweep every required input — not just every comparative — and ask **"who supplies this?"** A tunables registry that records values without suppliers is half a registry. At Gate 1, extend the PF-8 sweep from comparative phrases to **durations, artefacts, and choices**, and check that every entry in the tunables registry names a supplier. Front-run it by treating the `Kind` column as load-bearing rather than descriptive. Kin to PF-8 (which parameterises the value but not its provenance) and to PF-4's inverse: **an unearned inclusion is gold-plating; an unsupplied requirement is an unbuildable one.**
+
+## PF-13 — Records-zone defect invisible to Construction-scoped gates
+
+*Added 2026-08-04 from the AcuityFlow-v1 and AcuityFlow-Potemkin-Demo cartridges. The finding behind this catalog's own reconciliation to per-volume numbering: this entry is `PF-13` in the **Baseplate** volume; a `PF-13` in another volume's catalog is unrelated. Distinct from PF-12 — PF-12 is a product defect the stranger test catches; this is an engine defect no close-out gate can see.*
+
+**Trigger:** A `Records/` file carries an unresolvable reference, or a figure restated across several records that has drifted, and no close-out check inspects it — because every close-out gate (Gate 1, the packaging mechanical check, the reference sweep, and the orientation probe) is scoped to `Construction/` and the product bootstrap. Two instances, both in `Records/`, both survived every gate: (a) five records cited a portfolio entry `PF-14` that does not exist in this volume — the drafting assumed a `PF-13` that in fact belongs to a *different* operating volume's catalog, and the unbounded "records may reference anything" exemption *permitted* it rather than merely missing it; (b) a stranger-test finding total was restated across six records and diverged (a PF-9-genus enumeration drift, but in `Records/`, which the PF-9 guard does not reach).
+
+**Why it matters:** It is not a build hazard — `Construction/` verifies clean and the builder never needs `Records/`. But "the record of the engagement contains a defect the gates structurally cannot see" is a distinct, recurring shape: a *scope* failure, not a novel symptom. Enforcement scoped to one zone leaves the other zones unchecked by construction, so a whole class of defect is *permitted*, not just undetected. The two symptoms were PF-7 (dangling reference) and PF-9 (enumeration drift) by genus — but neither guard reaches `Records/`, so both passed every gate clean.
+
+**Fix:** Bound the records exemption — records may reference anything *that resolves*. Sweep `Records/` for identifiers in this volume's own controlled namespaces (`PF-`, `OFR-`, `ONF-`, `BM-`, and the cartridge's ID scheme) and confirm each resolves; check that figures restated across records agree with one owning record; read this volume's catalog's last entry number before assigning a new `PF-n` (numbering is per operating volume).
+
+**Prevention:** `06-CLOSE-OUT.md` Step 1.4 (Records identifier-resolution sweep, bounded to controlled identifiers), Step 5.1 (records count-agreement), and Step 6 (per-volume catalog-number read). Generalising lesson for the engine itself: when adding any gate or sweep, name the *zone* it covers, and ask what the other zones now permit by its omission.
 
 ## Adding new entries
 

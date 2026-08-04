@@ -4,7 +4,7 @@ timestamp: "2026-07-20T00:00:00Z"
 Item_ID: baseplate-engine-06-close-out
 title: "Baseplate Engine — 06 Close-Out"
 Date_Added: 2026-07-20
-Date_Modified: 2026-07-20
+Date_Modified: 2026-08-04
 Needs_Processing: false
 doc_type: baseplate-engine
 role: close-out-packaging-protocol
@@ -44,7 +44,7 @@ The packaged top level contains **only subfolders plus one file**:
 1. Rename `Artifacts/` → `Construction/`.
 2. Move into `Records/`: `_product-interview.md`, `_selection-record.md`, `_dependency-log.md`, `_design-state.md`, `_ov-manifest.md`, `stranger-test-log.md`, and the whole `Sessions/` folder.
 3. Create `Build/` and seed its two files (step 4).
-4. **Reference sweep on the new layout** (PF-7 at package level): grep `Construction/` for the old folder name (`Artifacts`) and for every Records filename — any hit inside a construction document is a defect. Records files may reference anything (they are history); construction documents may reference only `Construction/` contents.
+4. **Reference sweep on the new layout** (PF-7 / PF-13 at package level): grep `Construction/` for the old folder name (`Artifacts`) and for every Records filename — any hit inside a construction document is a defect. Construction documents may reference only `Construction/` contents. **Records files may reference anything *that resolves*** — records are history and may legitimately point outside the package (the engine, the portfolio catalog, prior sessions, source material), but they may not point at something that does not exist. **Sweep `Records/` for identifiers in this volume's own controlled namespaces — `PF-`, `OFR-`, `ONF-`, `BM-`, and the cartridge's own ID scheme — and confirm each resolves to a real entry** (this volume's `_portfolio/failure-catalog.md`, `_meta/TRACEABILITY.md`, or the stack itself). This is a manual grep and a lookup, not a new gate, and it is bounded to controlled identifiers — free-prose references to engine section numbers, external sources, or prior products remain unbounded. A `PF-`/`OFR-`/`ONF-`/`BM-` identifier is scoped to **this** operating volume; a number that exists only in another volume's catalog (or in a copy of this volume not yet reconciled) is a dangling reference here (PF-13).
 
 ### Step 2 — Manifest (`Construction/MANIFEST.md`)
 
@@ -73,12 +73,12 @@ P7 applies: the bootstrap names no human unless the operator explicitly provided
 
 ### Step 5 — Packaging verification (both checks required)
 
-1. **Mechanical:** every path the product bootstrap references exists; every manifest hash matches; the step-1.4 reference sweep is clean; top level contains exactly the one file + subfolders.
+1. **Mechanical:** every path the product bootstrap references exists; every manifest hash matches; the step-1.4 reference sweeps are clean for **both** `Construction/` (old-name / Records filenames) **and** `Records/` (controlled-identifier resolution); every figure restated across `Records/` — gate counts, stranger-test finding totals, rerun counts — agrees with its one owning record (cite, don't recopy; a divergent restatement is a defect, PF-9-genus in `Records/`); top level contains exactly the one file + subfolders.
 2. **Orientation probe:** a fresh instance (no conversation history) receives only the packaged folder and is asked what it would do first. Pass = it verifies the manifest, correctly states what it is building, and identifies its first phase of work **using only the bootstrap and construction documents**. This is a cheap orientation check, not a rerun of Gate 2 — but any missing/unresolvable reference it hits is a packaging defect: fix and re-probe.
 
 ### Step 6 — Close the cartridge
 
-Final write to `Records/_design-state.md` (phase: `packaged`; the packaging is the last entry) and a final session log in `Records/Sessions/`. Append any new failure mode to `_portfolio/failure-catalog.md` and trace it in `_meta/TRACEABILITY.md` in the same change (OFR-12/13). Then stop — the cartridge is closed.
+Final write to `Records/_design-state.md` (phase: `packaged`; the packaging is the last entry) and a final session log in `Records/Sessions/`. Append any new failure mode to `_portfolio/failure-catalog.md` and trace it in `_meta/TRACEABILITY.md` in the same change (OFR-12/13). **Before assigning a new `PF-n`, read the last entry number in *this* volume's `_portfolio/failure-catalog.md` and assign the next integer after it. Catalog numbering is per operating volume: a `PF-` number seen in another volume's catalog — or in a copy of this volume not yet reconciled with the release catalog — is not this volume's next number. Never assign a number by assumption.** Then stop — the cartridge is closed.
 
 ## After packaging
 
@@ -90,6 +90,7 @@ Final write to `Records/_design-state.md` (phase: `packaged`; the packaging is t
 
 - [ ] Final layout exact: one file + `Construction/` + `Records/` + `Build/` at top level
 - [ ] Reference sweep clean (no old-name or Records references inside `Construction/`)
+- [ ] Records reference-resolution sweep clean (every `PF-`/`OFR-`/`ONF-`/`BM-`/cartridge-ID identifier in `Records/` resolves in **this** volume) and every figure restated across `Records/` agrees with its owning record (PF-13)
 - [ ] `MANIFEST.md` written; hashes verified
 - [ ] Product `AI-BOOTSTRAP.md` contains all nine required sections, including the complete operator-input register with when-to-ask triggers
 - [ ] `Build/` seeded (build-state + deviations rule)

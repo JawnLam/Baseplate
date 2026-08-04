@@ -4,13 +4,33 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-changelog
 title: "Baseplate — Changelog"
 Date_Added: 2026-07-16
-Date_Modified: 2026-07-16
+Date_Modified: 2026-08-04
 Needs_Processing: false
 ---
 
 # Changelog
 
 Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follows [SemVer](https://semver.org/).
+
+## [1.3.0] — 2026-08-04
+
+**Records-zone reference discipline (PF-13); release history reconciled.** Operator-directed engine change from the AcuityFlow-v1 and AcuityFlow-Potemkin-Demo engagements: the close-out reference sweep (`06-CLOSE-OUT.md` Step 1.4) previously exempted `Records/` files from reference checking entirely ("Records files may reference anything — they are history"). That exemption was unbounded, so an *unresolvable* pointer inside `Records/` was permitted, not merely unchecked. Two defects rode through every gate on the strength of it — a records citation to `PF-14` for what was really this volume's `PF-12` (the assumed intervening number belonging to a **different** operating volume's catalog), and a stranger-test total restated across six records with one divergent copy — because Gate 1, the mechanical packaging check, and the orientation probe are all Construction-scoped. Schema untouched (FROZEN v1.0); minor bump — additive engine discipline plus a narrowed exemption, no Type/section/pass-rule change.
+
+### Added
+
+- **PF-13 — Records-zone defect invisible to Construction-scoped gates** (`_portfolio/failure-catalog.md`): a `Records/` file carrying an unresolvable controlled-identifier reference or a drifted restated figure survives every gate because all gates are Construction-scoped. Prevention is at close-out (the Step 1.4 / 5.1 / 6 additions below); the generalising lesson — *when adding any gate or sweep, name the zone it covers and ask what the other zones now permit by its omission* — is recorded with the entry. Traced in `_meta/TRACEABILITY.md` (OFR-16 row + failure-modes paragraph).
+
+### Changed
+
+- **`_baseplate-engine/06-CLOSE-OUT.md` Step 1.4 (reference sweep)** — the `Records/` exemption is narrowed from "may reference anything" to "may reference anything **that resolves**": records remain free to point outside the package (the engine, the portfolio catalog, prior sessions, source material) but may not point at something that does not exist. Adds a manual, bounded sweep of `Records/` for this volume's controlled identifiers (`PF-`, `OFR-`, `ONF-`, `BM-`, and the cartridge's own ID scheme), confirming each resolves **in this volume**; free-prose and external references remain unbounded. Notes that a controlled number found only in another volume's catalog, or in an unreconciled copy of this one, is a dangling reference here (PF-13).
+- **`_baseplate-engine/06-CLOSE-OUT.md` Step 5.1 (mechanical packaging check)** — now also requires the Step-1.4 sweeps clean for **both** `Construction/` and `Records/`, and that every figure restated across `Records/` (gate counts, stranger-test totals, rerun counts) agrees with its one owning record (PF-9 genus applied to the record zone).
+- **`_baseplate-engine/06-CLOSE-OUT.md` Step 6 (close the cartridge)** — adds the per-volume catalog-numbering rule: read the last `PF-n` in **this** volume's catalog and assign the next integer; a `PF-` number seen in another volume's catalog, or in an unreconciled copy of this one, is not this volume's next number. Never assign a number by assumption.
+- **`_baseplate-engine/06-CLOSE-OUT.md` checklist** — gains the Records reference-resolution + cross-record count-agreement box (PF-13).
+- **`_meta/TRACEABILITY.md`** — OFR-16 row's Verification cell gains the Records identifier-resolution sweep, the cross-record count-agreement check, and the per-volume catalog-number read; its "failure prevented" gains PF-13.
+
+### Reconciliation
+
+- **Release history brought current with in-field catalog growth.** Four failure modes were appended to the portfolio catalog and traceability matrix during real engagements after v1.2.0 shipped — **PF-9** (cross-document enumeration drift, Gridlock close-out probe), **PF-10** (operational content pinned outside the stack, PTIS), **PF-11** (source-citation bleed in decomposition, OmniLattice-Deal-Room), and **PF-12** (unsourced required input, the AcuityFlow engagements) — as the additive/patch-class changes the change discipline permits, but none was recorded in `CHANGELOG.md` or `VERSION.md`. This release backfills those entries into the canonical catalog + traceability (they had reached only the in-use install) and brings the recorded catalog range to **PF-1..PF-13**. No fabricated per-entry dates: the four are folded here rather than given retroactive version stamps.
 
 ## [1.2.0] — 2026-07-20
 
