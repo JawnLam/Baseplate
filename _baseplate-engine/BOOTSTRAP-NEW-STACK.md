@@ -38,7 +38,7 @@ Run the product interview one question at a time. Capture PI-1..PI-12 in `_produ
 
 ## Step 3 — Select (`03-SELECTION.md`)
 
-Walk the class registry against the interview answers. Record every inclusion and exclusion with its triggering PI-answer in a `BASEPLATE_Selection_Record`. Lock the ID scheme and precedence declaration. **Selection locks before any drafting (F8).**
+Walk the class registry against the interview answers. Record every inclusion and exclusion with its triggering PI-answer in a `BASEPLATE_Selection_Record`. Lock the ID scheme and precedence declaration. **Selection locks before any drafting (F8).** *(v1.4.0: the walk now includes the lifecycle classes — evolution roadmap, maintenance & stewardship, data lifecycle. They are earned like any row; a long-lived product that excludes the roadmap records why, and every capability deliberately deferred during this engagement lands as a register entry with a re-entry gate, not a chat memory.)*
 
 ## Step 4 — Generate (`04-GENERATION-STANDARDS.md`)
 

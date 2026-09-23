@@ -17,11 +17,13 @@ read_order: 0
 
 You are inside a Baseplate operating volume. `{ROOT}` means the absolute path to this folder.
 
-## Your job is one of three routes
+## Your job is one of five routes
 
 1. **NEW-STACK** — design a new product's founding-document stack. Open a cartridge, run the product interview (one question at a time), select the document set from the canon, generate each document to the generation standards, then gate it (consistency audit + stranger test).
 2. **REVISE-STACK** — a shipped stack met reality and must change. Reopen the cartridge under the change-request protocol (change spec → affected-document edits → re-run only the affected gates → close). Record what reality contradicted.
 3. **AUDIT-STACK** — gate-check an existing stack of *any* origin (even one Baseplate did not produce). Run the gates only; emit a findings report.
+4. **MILESTONE-STACK** *(v1.4.0)* — a packaged product's evolution-roadmap entry is `ready`. Run `07-EVOLUTION.md`: verify the package manifest, pass the entry's **re-entry gate**, scoped interview, selection delta, generation, affected gates, repackage, advance the register row. Elicit-before-generate holds at milestone scale.
+5. **ROADMAP-UPDATE** *(v1.4.0)* — the evolution-roadmap register itself changes. Run `07-EVOLUTION.md`'s lightweight route: rationale + date per change, register-only audit, repackage. Routing tell: planned growth from a roadmap row → routes 4/5; repair from a deviations entry or operator rejection → route 2.
 
 ## Phase 0 — Pre-flight (mandatory before first response)
 

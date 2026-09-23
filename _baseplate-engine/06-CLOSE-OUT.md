@@ -63,6 +63,7 @@ The single top-level file. Required sections, in order:
 7. **Deviations rule** — restate the standing rule from step 4 below.
 8. **Records notice** — `Records/` is history: not needed for construction, never to be modified.
 9. **Provenance** — produced by Baseplate `<version>`, package date, stranger-test verdict and rerun count, drafting-model note.
+10. **Evolution** *(v1.4.0 — required when the stack includes the evolution-roadmap class; otherwise state "no roadmap shipped")* — name the roadmap document, restate its status vocabulary in one line, and state the re-entry rule **self-containedly**: acting on a milestone or changing the register is a founding-documents engagement run by the system named in §9's provenance; the builder never needs that system, the operator returns the folder to it. No engine vocabulary beyond the provenance name.
 
 P7 applies: the bootstrap names no human unless the operator explicitly provided a name for it.
 

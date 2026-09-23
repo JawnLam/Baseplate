@@ -54,6 +54,11 @@ Each row: canon class → layer, earning condition (the product-shape signal), s
 | SOW | 6 | Money or formal obligation crosses a boundary (PI-12) | `BASEPLATE_Contract_Document` | Deliverables; Milestones; Acceptance; Payment |
 | license & attribution | 6 | **Always** | `BASEPLATE_Contract_Document` | License; Attribution block |
 | WBS / plan | 6 | Multiple workstreams must interleave (PI-10) | `BASEPLATE_Contract_Document` | Workstreams; Dependencies; Sequence |
+| **evolution roadmap / deferred-scope register** *(v1.4.0)* | 1 | The product lives and evolves (PI-9), or any capability was deliberately deferred during interview/selection/build | `BASEPLATE_Narrative_Document` | Milestone register (stable IDs; per row: what; why deferred; evidence awaited; extension point shaped in v1; re-entry gate checklist; status + dated history); Status vocabulary (`deferred/ready/specced/built/retired` — lifecycle in `07-EVOLUTION.md`); Update rule (self-contained: changes and activations run through the founding-document system named in the bootstrap's provenance); Deferred-vs-never boundary |
+| **maintenance & stewardship** *(v1.4.0)* | 5 | Continuous/scheduled runtime (PI-8) or ongoing lifespan with revision expected (PI-9) | `BASEPLATE_Operations_Document` | Dependency re-verification cadence; Change classification (builder-local vs stack-revision, with triggers); Acceptance-regression policy; Product versioning & changelog discipline; Re-gate triggers |
+| **data lifecycle** *(v1.4.0)* | 5 | Persistent personal or subject data (PI-6) | `BASEPLATE_Operations_Document` | Retention; Export; Deletion; Subject/tenant departure; Backup sensitivity inheritance |
+
+*(The three v1.4.0 classes are additive menu rows mapping to existing structural Types — the frozen v1.0 schema is untouched. They are earned like every other row: an unexplained inclusion is still gold-plating; a long-lived product that excludes the roadmap class records why.)*
 
 ## Output
 

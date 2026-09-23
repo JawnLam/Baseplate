@@ -30,6 +30,8 @@ See `CONTRIBUTING.md § Content zones` for the full path patterns.
 | The consistency audit finds an orphan requirement | Add the missing verification (or requirement), or delete the orphan with a reason. Re-run the audit. |
 | The stranger test asks a question the stack should have answered | Ship block. Fix the stack to answer it, then rerun with a *fresh* instance (never the drafting session). |
 | A shipped stack met reality and is now wrong | Use REVISE-STACK (`05-GATES.md § Revision`), not ad-hoc edits. Record what reality contradicted — it feeds the portfolio catalog. |
+| A roadmap milestone is ready to act on *(v1.4.0)* | Bring the packaged folder back and say so — MILESTONE-STACK (`07-EVOLUTION.md`) runs the re-entry gate, a scoped interview, and the gates before any milestone document is drafted. "Go ahead and write the milestone PRD" gets the gate first, on purpose. |
+| The roadmap itself needs changing *(v1.4.0)* | ROADMAP-UPDATE (`07-EVOLUTION.md`): every add/amend/retire carries rationale + date; entries are never silently deleted. |
 
 ## Updates and troubleshooting
 
