@@ -4,7 +4,7 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-engine-bootstrap-new-stack
 title: "Baseplate Engine — Bootstrap New Stack"
 Date_Added: 2026-07-16
-Date_Modified: 2026-07-16
+Date_Modified: 2026-09-23
 Needs_Processing: false
 doc_type: baseplate-engine
 role: cartridge-bootstrapping-prompt
