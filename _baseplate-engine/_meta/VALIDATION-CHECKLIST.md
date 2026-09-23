@@ -4,7 +4,7 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-meta-validation-checklist
 title: "Baseplate Meta — Validation Checklist (manual gate walkthrough)"
 Date_Added: 2026-07-16
-Date_Modified: 2026-07-16
+Date_Modified: 2026-09-23
 Needs_Processing: false
 doc_type: baseplate-meta
 role: validation-checklist
@@ -47,7 +47,7 @@ Walk the checklist at the end of `06-CLOSE-OUT.md`. Headline items:
 - [ ] Final layout exact: product `AI-BOOTSTRAP.md` + `Construction/` + `Records/` + `Build/` — nothing else at top level.
 - [ ] Reference sweep clean: no `Artifacts` (old name) or Records-file references inside `Construction/`.
 - [ ] `Construction/MANIFEST.md` written; hashes verified.
-- [ ] Product bootstrap has all nine required sections, including the complete operator-input register with when-to-ask triggers.
+- [ ] Product bootstrap has all ten required sections (v1.4.0 — §10 Evolution, or its explicit "no roadmap shipped" line), including the complete operator-input register with when-to-ask triggers.
 - [ ] `Build/` seeded (`build-state.md`, `deviations.md`).
 - [ ] Packaging verification: mechanical check green AND fresh-instance orientation probe passed.
 

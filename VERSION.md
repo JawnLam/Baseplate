@@ -4,11 +4,11 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-version
 title: "Baseplate — Version"
 Date_Added: 2026-07-16
-Date_Modified: 2026-08-04
+Date_Modified: 2026-09-23
 Needs_Processing: false
-baseplate_Version: "1.3.0"
+baseplate_Version: "1.4.0"
 schema_status: "FROZEN"
-release_date: 2026-08-04
+release_date: 2026-09-23
 ---
 
 # Baseplate — Version

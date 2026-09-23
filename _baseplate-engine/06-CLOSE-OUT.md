@@ -4,7 +4,7 @@ timestamp: "2026-07-20T00:00:00Z"
 Item_ID: baseplate-engine-06-close-out
 title: "Baseplate Engine — 06 Close-Out"
 Date_Added: 2026-07-20
-Date_Modified: 2026-08-04
+Date_Modified: 2026-09-23
 Needs_Processing: false
 doc_type: baseplate-engine
 role: close-out-packaging-protocol
@@ -93,7 +93,7 @@ Final write to `Records/_design-state.md` (phase: `packaged`; the packaging is t
 - [ ] Reference sweep clean (no old-name or Records references inside `Construction/`)
 - [ ] Records reference-resolution sweep clean (every `PF-`/`OFR-`/`ONF-`/`BM-`/cartridge-ID identifier in `Records/` resolves in **this** volume) and every figure restated across `Records/` agrees with its owning record (PF-13)
 - [ ] `MANIFEST.md` written; hashes verified
-- [ ] Product `AI-BOOTSTRAP.md` contains all nine required sections, including the complete operator-input register with when-to-ask triggers
+- [ ] Product `AI-BOOTSTRAP.md` contains all ten required sections (v1.4.0 — §10 Evolution, or its explicit "no roadmap shipped" line), including the complete operator-input register with when-to-ask triggers
 - [ ] `Build/` seeded (build-state + deviations rule)
 - [ ] Mechanical packaging check green
 - [ ] Orientation probe passed with a fresh instance

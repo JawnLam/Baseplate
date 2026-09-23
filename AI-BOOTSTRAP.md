@@ -4,7 +4,7 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-ai-bootstrap
 title: "Baseplate — AI Bootstrap"
 Date_Added: 2026-07-16
-Date_Modified: 2026-07-16
+Date_Modified: 2026-09-23
 Needs_Processing: false
 doc_type: bootstrap
 audience: ai
@@ -60,7 +60,7 @@ Plus, if a cartridge is active: its `_ov-manifest.md`, `_design-state.md`, and t
 
 ### 3. Readiness statement (before any other user-facing text)
 
-Two to four sentences. State the route (NEW-STACK / REVISE-STACK / AUDIT-STACK). Cite **one non-guessable fact** — for an active cartridge, a concrete fact from its state (current phase, a locked selection decision); for a fresh start, a specific rule you will enforce this turn (e.g., *"I'll run the interview one question at a time per the elicitation protocol before selecting any documents"*). A confident *"I've read Baseplate, how can I help?"* with no cited rule or fact is the diagnostic that the reads did not happen.
+Two to four sentences. State the route (NEW-STACK / REVISE-STACK / AUDIT-STACK / MILESTONE-STACK / ROADMAP-UPDATE). Cite **one non-guessable fact** — for an active cartridge, a concrete fact from its state (current phase, a locked selection decision); for a fresh start, a specific rule you will enforce this turn (e.g., *"I'll run the interview one question at a time per the elicitation protocol before selecting any documents"*). A confident *"I've read Baseplate, how can I help?"* with no cited rule or fact is the diagnostic that the reads did not happen.
 
 ## The one rule that defines Baseplate
 

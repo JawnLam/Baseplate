@@ -4,7 +4,7 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-changelog
 title: "Baseplate — Changelog"
 Date_Added: 2026-07-16
-Date_Modified: 2026-08-04
+Date_Modified: 2026-09-23
 Needs_Processing: false
 ---
 
@@ -22,7 +22,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); versioning follo
 - **Wiring:** Gate 1 gains a roadmap-register well-formedness check; `05-GATES.md § Revision` carries the repair-vs-growth routing note; the product bootstrap's required sections grow 9 → 10 (**§10 Evolution** — the re-entry seam stated self-containedly; packaged folders still never depend on Baseplate to be *built*); `BOOTSTRAP-NEW-STACK.md` Step 3 walks the new classes and lands every deliberate deferral as a register entry.
 - **Traceability:** OFR-17 (lifecycle documents earned & governed; milestone activation gated) and OFR-18 (register changes routed & recorded).
 - **Catalog reconciliation** (v1.3.0 precedent): PF-14 (number retired, unused), PF-15 (operator-intent inversion survives both gates — the rendered-reference rule), PF-16 (source-intake integrity), PF-17 (fix-round coherence debt) absorbed verbatim from the in-field catalog; PF-15's missing traceability paragraph added. Canonical range: PF-1..PF-17.
-- **Gates:** G1 constitutional regression probe (SnackRoute opener) and G2 evolution probe (fixed wording in the release scope) on fresh instances + independent DoD eval — results recorded in the release scope's gate log.
+- **Gates:** G1 constitutional regression probe (SnackRoute opener) and G2 evolution probe (fixed wording in the release scope) on fresh instances + independent DoD eval — results recorded in `_meta/release-v1.4.0-gate-log.md` (runs, triage, and verbatim subject transcripts).
 
 ## [1.3.0] — 2026-08-04
 
