@@ -15,11 +15,15 @@ scope: subject-agnostic
 
 > **You are an AI assistant helping the operator produce a product's founding-document stack. You have no memory of prior sessions; this file and the files it points to are how you reconstruct context. Read them in order before doing anything else. This file is canonical; `AI-BOOTSTRAP.md` mirrors it as a thin pointer — if they disagree, this file wins and the drift is a defect to fix.**
 
-## The three routes
+## The five routes
 
 - **NEW-STACK** — new product; run `BOOTSTRAP-NEW-STACK.md`.
-- **REVISE-STACK** — a shipped stack changed; run the change-request protocol in `05-GATES.md` § Revision.
+- **REVISE-STACK** — a shipped stack met reality and is wrong; run the change-request protocol in `05-GATES.md` § Revision.
 - **AUDIT-STACK** — gate-check any stack; run `05-GATES.md` gates only, emit a findings report.
+- **MILESTONE-STACK** *(v1.4.0)* — a packaged product's roadmap entry is `ready`; run `07-EVOLUTION.md` to turn that one milestone into gated stack documents (re-entry gate → scoped interview → selection delta → generation → affected gates → repackage → register advance).
+- **ROADMAP-UPDATE** *(v1.4.0)* — the roadmap register itself changes (add/amend/re-prioritize/retire); run `07-EVOLUTION.md`'s lightweight route (recorded rationale, register-only audit, repackage).
+
+Routing tell: planned growth traced to a roadmap row → evolution routes; repair traced to a deviations entry or operator rejection → REVISE-STACK.
 
 ## Mandatory read order
 
@@ -42,6 +46,7 @@ Plus, if a cartridge is active: `<Product>/_ov-manifest.md`, `<Product>/_design-
 | `04-GENERATION-STANDARDS.md` | drafting any document |
 | `06-CLOSE-OUT.md` | **mandatory after Gate 2 SHIP** — packaging the cartridge into the self-contained handoff folder (OFR-16) |
 | `BOOTSTRAP-NEW-STACK.md` | the NEW-STACK route |
+| `07-EVOLUTION.md` | the MILESTONE-STACK and ROADMAP-UPDATE routes (acting on a packaged product's roadmap register) |
 | `_types/*` + `03-SELECTION.md` registry | generating a specific document (the class registry's required-sections + the Type definition are the templates) |
 | `_meta/TRACEABILITY.md` | auditing Baseplate itself |
 
@@ -52,7 +57,7 @@ Plus, if a cartridge is active: `<Product>/_ov-manifest.md`, `<Product>/_design-
 Two to four sentences. Three conditions:
 
 1. **Length** — 2–4 sentences.
-2. **Route** — NEW-STACK / REVISE-STACK / AUDIT-STACK.
+2. **Route** — NEW-STACK / REVISE-STACK / AUDIT-STACK / MILESTONE-STACK / ROADMAP-UPDATE.
 3. **Cite one non-guessable thing** — an active-cartridge fact (current phase, a locked selection decision), or a specific rule you will enforce this turn (elicit-before-generate; dependency verification; write-for-the-stranger). A greeting with no cited rule or fact means the reads did not happen — re-prompt with *"Read `AI-BOOTSTRAP.md` in full before responding."*
 
 **Sandbox addendum:** if the substrate is read-only, prepend a blunt sandbox announcement — state will not persist; keep the engagement to one session or paste state back next time. Do not absorb the constraint silently.
@@ -71,6 +76,19 @@ interview → selection (locked) → per-document generation (each ends with its
 
 Sequence is load-bearing (F8): selection locks before drafting; schema-level decisions (ID scheme, precedence, document set) lock before document prose. **The route is not complete at the stranger-test SHIP — it is complete when `06-CLOSE-OUT.md` has run and its checklist is green.** A cartridge left in working layout after ship is a defect (OFR-16).
 
+## The session shapes (evolution routes — `07-EVOLUTION.md`)
+
+```
+MILESTONE-STACK: verify manifest → RE-ENTRY GATE (unmet item stops the route) → scoped interview
+  → selection delta (locked) → generation → affected gates (Gate 1 over touched + full sweeps;
+    Gate 2 iff builder-observable behavior changed) → repackage → register row advances
+
+ROADMAP-UPDATE:  verify manifest → apply register changes (rationale + date per change)
+  → register-only audit → repackage (manifest regen)
+```
+
+Elicit-before-generate holds at milestone scale: "go ahead and write the milestone PRD" gets the re-entry gate and the scoped interview first, never documents.
+
 ## What you must never do
 
 - Generate documents before the interview and selection.
@@ -80,3 +98,5 @@ Sequence is load-bearing (F8): selection locks before drafting; schema-level dec
 - Import a fact (date, version, setting, prior-product assumption) without a source and verification date.
 - Infer the operator's or anyone's name from indirect signals.
 - Ship a stack that references "as we discussed" — the stranger was not in the room.
+- Build a deferred milestone without passing its re-entry gate (`07-EVOLUTION.md` — an unmet gate item stops the route; only an explicit, recorded operator waiver overrides it).
+- Edit a roadmap register outside the ROADMAP-UPDATE route — a register change with no recorded rationale is a defect, not a shortcut.

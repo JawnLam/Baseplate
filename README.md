@@ -38,7 +38,7 @@ The AI will start by interviewing you, one question at a time. It will *not* sta
 | Path | Contents |
 |------|----------|
 | `AI-BOOTSTRAP.md` | AI entry point |
-| `_baseplate-engine/` | The canon + protocols: `00-START-HERE`, `01-THE-CANON`, `02-ELICITATION`, `03-SELECTION`, `04-GENERATION-STANDARDS`, `05-GATES`, `BOOTSTRAP-NEW-STACK` |
+| `_baseplate-engine/` | The canon + protocols: `00-START-HERE`, `01-THE-CANON`, `02-ELICITATION`, `03-SELECTION`, `04-GENERATION-STANDARDS`, `05-GATES`, `06-CLOSE-OUT`, `07-EVOLUTION`, `BOOTSTRAP-NEW-STACK` |
 | `_types/` | The eight structural document Types |
 | `_portfolio/` | The cross-cartridge failure catalog (Grows-Through-Use Zone) |
 | `_meta/` | Posture, traceability matrix, golden-session log |

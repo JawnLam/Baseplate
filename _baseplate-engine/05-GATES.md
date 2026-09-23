@@ -26,6 +26,7 @@ Mechanical checklist over the frozen `Artifacts/` folder. Every item is a hard c
 - [ ] **Dependency log complete.** Every named external (tool, package, API, dataset, service) in any document has an entry in `_dependency-log.md` with method-of-check and date.
 - [ ] **Anti-staleness marks present.** Every imported fact carries its source + verification date.
 - [ ] **Non-goals present** in every requirements-bearing document.
+- [ ] **Roadmap register well-formed** (when the stack includes the evolution-roadmap class, v1.4.0): IDs stable and unique; statuses legal per `07-EVOLUTION.md`'s lifecycle; every non-retired entry carries a re-entry gate; no entry contradicts a requirements document's non-goals.
 
 Any unchecked box: fix, or operator-waive with a written reason recorded in the cartridge state (`_design-state.md`, or `_ov-manifest.md` for a single-session cartridge). Then re-run. Advance each document to `baseplate_document_status: audited`.
 
@@ -57,7 +58,7 @@ Classify **charitably**: a question is `operator-only` if a *competent builder* 
 
 ## Revision (REVISE-STACK — OFR-14)
 
-A shipped stack meets reality and must change. Do not hand-edit ad hoc. Run the change-request protocol:
+A shipped stack meets reality and must change. Do not hand-edit ad hoc. Run the change-request protocol below. *(v1.4.0 routing note: this route is for **repair** — reality contradicted the spec. **Planned growth** — acting on a roadmap register entry, or changing the register — runs the evolution routes in `07-EVOLUTION.md` instead; the register row vs deviations-entry provenance of the work item is the tell.)*
 
 1. **Change spec** — what reality contradicted, and which requirements/decisions it invalidates. Record it (it feeds the portfolio catalog).
 2. **Acceptance deltas** — what "fixed" means, as verification changes.

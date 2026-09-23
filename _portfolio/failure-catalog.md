@@ -4,7 +4,7 @@ timestamp: "2026-07-16T00:00:00Z"
 Item_ID: baseplate-portfolio-failure-catalog
 title: "Baseplate — Portfolio Failure Catalog"
 Date_Added: 2026-07-16
-Date_Modified: 2026-08-04
+Date_Modified: 2026-09-23
 Needs_Processing: false
 doc_type: baseplate-portfolio
 role: failure-catalog
@@ -171,6 +171,46 @@ Six instances, all caught by the stranger and none by the audit:
 **Fix:** Bound the records exemption — records may reference anything *that resolves*. Sweep `Records/` for identifiers in this volume's own controlled namespaces (`PF-`, `OFR-`, `ONF-`, `BM-`, and the cartridge's ID scheme) and confirm each resolves; check that figures restated across records agree with one owning record; read this volume's catalog's last entry number before assigning a new `PF-n` (numbering is per operating volume).
 
 **Prevention:** `06-CLOSE-OUT.md` Step 1.4 (Records identifier-resolution sweep, bounded to controlled identifiers), Step 5.1 (records count-agreement), and Step 6 (per-volume catalog-number read). Generalising lesson for the engine itself: when adding any gate or sweep, name the *zone* it covers, and ask what the other zones now permit by its omission.
+
+## PF-14 — number retired, unused
+
+**Deliberately skipped.** This volume's records already carry the token `PF-14` with a prior life: on 2026-08-04, five AcuityFlow records cited "PF-14" as a portfolio entry that did not exist (the drafting mis-assumed the catalog's tail), and the recorded corrections in those files quote the token as *the error being corrected*. Assigning a real entry to the same number would make those corrections ambiguous — a sweep hitting "PF-14" could no longer tell a historical mention from a live reference. Numbering is append-only and cheap; the number is retired unused. (Consequence of the PF-13 per-volume-numbering rule; adjudication recorded in the AFPD cartridge's session-02/03 records.)
+
+## PF-15 — Operator-intent inversion survives both gates
+
+*Added 2026-08-05 from the AcuityFlow-Potemkin-Demo second revision — the volume's first operator rejection of a faithfully built artefact. Caught by neither gate; caught by the operator holding the build.*
+
+**Trigger:** A stack specifies an interaction model (here: a linear thirteen-beat tap-through rail) that is internally consistent, fully buildable, and **wrong** — it inverts the operator's stated intent (*"look and function like an app"*). Both gates pass it, correctly by their own terms: the consistency audit verifies form; the stranger test verifies that a fresh builder can produce the specified artefact deterministically. The stranger *restates the wrong model fluently* — ST-1 measures fidelity to the documents, not to the operator's head. Two independent builds then converge on the same rejected artefact, proving the spec deterministic and the determinism mis-aimed.
+
+**Why it matters:** This is the failure the gate stack is structurally blind to. PF-5/PF-6/PF-12 are all gaps *within* the documents that a use-attempting reader hits; this is a spec that contains no gap — every reader builds the same thing, and the thing is not what the operator meant. The cost profile is the worst in this catalog: the defect survives sealing, survives a commissioned build, and is discovered *by the principal audience* ("a slide deck with extra steps"), at the maximum-embarrassment moment and the maximum rework distance. In this engagement it cost a full 13-document redraft, four fresh stranger runs, and an operator who had to say it twice.
+
+**Fix:** Separate the conflated axes and re-decide each on its own record (here: scripted *content* retained; linear *rails* replaced by free navigation), then re-gate in full. The amended decision record documents both axes explicitly so the conflation cannot silently reform.
+
+**Prevention:** **For any stack whose deliverable is interaction-bearing, the operator validates a rendered reference — something they can drive — before the spec seals.** A cheap sketch at the right fidelity is sufficient; prose approval is not, because interaction intent lives below the level prose reaches ("thirteen scripted screens, driven by the viewer's own taps" described the rail and read as an app). The validated reference is cited in the deciding ADR as non-normative provenance; the documents stay self-contained. Kin to PF-5 (an absorbed assumption — but absorbed into the *interaction model*, where confident prose reads as decided), and the inverse of PF-6: there, silence makes two builders diverge; here, perfect specification makes them converge on the wrong thing. The stranger test cannot catch it by design — a stranger who questioned a coherent, buildable interaction model would be re-planning, which ST-2 forbids. Only the operator can, and only against something running.
+
+## PF-16 — Source-intake integrity unverified
+
+*Added 2026-08-09 from the Agentic-SMB-Valuation-Engine cartridge (a source-driven NEW-STACK run under heads-down operator authority). Caught at intake by a checksum comparison — the first entry in this catalog earned before the interview even began.*
+
+**Trigger:** Operator-supplied source documents are accepted at face value — their count, identity, and content assumed to match the operator's announcement. In this engagement the operator announced two documents; byte-comparison found them **identical** (same 6,583 bytes, same MD5). The second document's intended content — its very title promised an architectural gap-analysis — never reached the engagement, and nothing but the checksum made that visible.
+
+**Why it matters:** A source-driven engagement's entire derivation authority flows from its source material. A duplicated, truncated, or mis-exported source silently narrows scope, and **no downstream gate can notice**: every gate verifies the stack against itself and against the interview record — never against what the operator *meant* to supply. The missing content is unknowable by construction; only its absence is detectable, and only at intake. Had the duplicate gone unnoticed, the stack would have shipped gates-green against half the intended input, and the defect would have surfaced as operator rejection at the worst possible distance (PF-15's cost profile, arrived at by a different road).
+
+**Fix:** Hash every supplied source at intake; compare against the announcement (count, names, sizes, hashes); echo the verified inventory back in the receipt/readiness statement; record any anomaly as an operator-owned open question; proceed only on the verified subset — never inventing the gap (PF-5 discipline applied to the intake boundary).
+
+**Prevention:** Make source-intake verification a standing first step of any source-driven route: checksum all files, compare all pairs, state the inventory of record in the interview document's provenance section. A late-arriving true second document is a REVISE-STACK event, cleanly. Kin to PF-2 (staleness at the temporal boundary; this is integrity at the *intake* boundary) and PF-15 (both are defects invisible to gates that verify the stack rather than the operator's head).
+
+## PF-17 — Fix-round coherence debt in frozen contracts
+
+*Added 2026-08-09 from the Agentic-SMB-Valuation-Engine cartridge. Fired the catalog's escalation rule exactly: ship-gate runs 2 and 3 were blocked by the same question class — defects introduced by the fix rounds themselves.*
+
+**Trigger:** A gate-driven fix round edits one frozen document — adds a mechanism, a field, a grammar form — and the neighboring documents that co-own the semantics are not re-derived. Each edit lands locally coherent and globally contradictory. In this engagement: an override flag was added with no durable record, making the standing validate-clean invariant unsatisfiable; a recompute mode collided with an acceptance test's evidence-preservation demand; a provenance grammar gained a third form while the next document still said "exactly two"; the new form then lacked a class-binding row and made every ingest fail on paper.
+
+**Why it matters:** Fix rounds concentrate change precisely where the stack is most load-bearing — the frozen contracts — under exactly the conditions (speed, local focus, gate pressure) that produce cross-document drift. Per-document consistency passes and mechanical reference sweeps verify that citations *resolve*, not that co-owning documents still *agree on the semantics*; the contradiction lives between documents and surfaces only when the next fresh reader attempts to use them. The result is a convergence tax: each rerun pays for the previous rerun's repairs.
+
+**Fix:** For each blocked finding, before editing: enumerate the documents that co-own the mechanism (schema, grammar, behavior, test — the ownership map in the selection record is the index); apply the change to the full seam in one pass; then rerun the gate with a fresh instance. Never let the fix round's own author judge its coherence.
+
+**Prevention:** Treat every fix-round item as a miniature change-request — the revision protocol's affected-document discipline applied *inside* the pre-ship loop, not only after shipping. The enumeration-ownership map (PF-9's front-run) doubles as the seam index: any edit touching an owned set re-reads every citing document. The fresh-instance rerun remains the backstop that caught every instance here. Kin to PF-9 (drift between restatements) and PF-13 (defects between enforcement scopes): this is drift **between co-owning frozen documents, introduced under revision pressure**.
 
 ## Adding new entries
 
